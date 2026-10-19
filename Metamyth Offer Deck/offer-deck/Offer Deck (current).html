@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Metamyth — The Story System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>deck-stage:not(:defined){visibility:hidden}</style>
+</head>
+<body>
+
+<deck-stage>
+
+<!-- ═══════ 01 — TITLE ═══════ -->
+<section data-screen-label="01 Title">
+  <div class="frame"><i></i><b></b></div>
+
+  <!-- Butterfly hero on right -->
+  <div aria-hidden="true" style="position:absolute; top:50%; right:-120px; transform:translateY(-50%); width:1120px; height:1120px; pointer-events:none; z-index:5;">
+    <div style="position:absolute; inset:0; background:radial-gradient(circle at 50% 50%, rgba(95,232,211,0.16), rgba(95,232,211,0) 55%); filter:blur(8px);"></div>
+    <img src="assets/butterfly.png" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 0 50px rgba(95,232,211,0.18));">
+  </div>
+
+  <!-- Top bar: bigger logo + wordmark -->
+  <div style="position:absolute; top:74px; left:80px; display:flex; align-items:center; gap:22px;">
+    <img src="assets/butterfly.png" alt="" style="width:62px; height:62px; object-fit:contain;">
+    <div class="wordmark" style="font-size:30px; letter-spacing:0.34em;">Metamyth</div>
+  </div>
+  <div style="position:absolute; top:96px; right:80px; font-size:16px; letter-spacing:0.36em;" class="kicker">The Story System · Offer 2026</div>
+
+  <div style="position:absolute; left:80px; top:340px; width:1340px;">
+    <div class="eyebrow"><span class="dot"></span>The Invitation</div>
+    <h1 class="serif" style="font-size:112px; line-height:0.98; margin:42px 0 0; letter-spacing:-0.01em;">
+      The future you dream<br>
+      is one <span class="gold-text">story</span> away.
+    </h1>
+  </div>
+
+  <div style="position:absolute; left:80px; right:80px; bottom:90px; display:flex; justify-content:space-between; align-items:flex-end; gap:60px;">
+    <div style="max-width:880px;">
+      <div class="gold-rule" style="margin-bottom:24px;"></div>
+      <p class="body" style="font-size:28px; line-height:1.45; max-width:920px;">An epic journey to take back your story and author reality itself. Ancient technology, backed by science, <span class="teal">powered by modern magic.</span></p>
+    </div>
+  </div>
+
+  <div class="page-mark">Metamyth.quest</div>
+  <div class="page-number">01 / 16</div>
+</section>
+<!-- ═══════ 02 — PREMISE ═══════ -->
+<section data-screen-label="02 Premise">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>I · The Premise</div>
+
+  <div style="position:absolute; top:210px; left:80px; width:1040px;">
+    <h2 class="serif" style="font-size:68px; line-height:1; margin:0; letter-spacing:-0.005em;">
+      The world is made of stories.<br>
+      When you see that, <span class="gold-text">everything changes.</span>
+    </h2>
+    <div class="gold-rule" style="margin:36px 0 32px;"></div>
+    <p class="serif" style="font-size:30px; line-height:1.35; max-width:980px; color:var(--paper);">
+      The same narrative structure that runs your nervous system runs the global economy. It is how empires rise, how cult brands hypnotize millions, how history gets written. And it has been running you on autopilot since before you could speak.
+    </p>
+  </div>
+
+  <div style="position:absolute; top:240px; right:80px; width:600px;">
+    <div class="card" style="padding:44px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="label" style="margin-bottom:24px;">What we do</div>
+      <p class="body" style="font-size:26px; line-height:1.5;">
+        Together we reveal the story you have always been living and turn it into the living power that runs your <span class="teal">mission, your community, your offer, and your future.</span>
+      </p>
+    </div>
+  </div>
+
+  <div style="position:absolute; bottom:130px; left:80px; right:80px; display:grid; grid-template-columns:repeat(3,1fr); gap:60px;">
+    <div>
+      <div class="label" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow); margin-bottom:14px;">✦ Ancient Wisdom</div>
+      <p class="body" style="font-size:23px;">The grandmother around the fire knew how to reprogram her grandchildren&rsquo;s nervous systems. She just called it bedtime.</p>
+    </div>
+    <div>
+      <div class="label" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow); margin-bottom:14px;">✦ Neuroscience</div>
+      <p class="body" style="font-size:23px;">The brain fires the same circuits for a vividly told story as for a lived experience. Change the story, change the reality. The science confirmed what the grandmother already knew.</p>
+    </div>
+    <div>
+      <div class="label" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow); margin-bottom:14px;">✦ Modern Magic</div>
+      <p class="body" style="font-size:23px;">A living intelligence that runs on your spirit, generating everything your mission needs to spread. While you sleep.</p>
+    </div>
+  </div>
+
+  <div class="page-mark">I · The Premise</div>
+  <div class="page-number">02 / 16</div>
+</section>
+<!-- ═══════ 03 — THE TURNING ═══════ -->
+<section data-screen-label="03 Turning">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>II · The Turning</div>
+
+  <!-- Hero -->
+  <div style="position:absolute; top:164px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:64px; line-height:1; margin:0;">
+      The old story is <em style="color:var(--paper-2);">collapsing</em><br>
+      <span class="gold-text">in real time.</span>
+    </h2>
+    <p class="body" style="margin-top:14px; max-width:1400px; font-size:23px; color:var(--paper-dim); line-height:1.45;">
+      And the people who see it are having the time of their lives writing what comes next.
+    </p>
+  </div>
+
+  <!-- Thesis — full width, own moment -->
+  <div style="position:absolute; top:368px; left:80px; right:80px; display:flex; align-items:center; gap:36px;">
+    <div style="height:1px; flex:0 0 80px; background:linear-gradient(90deg, transparent, rgba(201,168,90,0.6));"></div>
+    <p class="serif" style="font-size:30px; line-height:1.25; margin:0; font-style:italic; color:var(--paper); text-align:center; flex:1; text-wrap:pretty;">
+      Personal transformation is a myth.<br>
+      <span class="gold-text" style="font-style:normal;">We transform together, on a journey.</span>
+    </p>
+    <div style="height:1px; flex:0 0 80px; background:linear-gradient(90deg, rgba(201,168,90,0.6), transparent);"></div>
+  </div>
+
+  <!-- Two-column body — extraction | answer -->
+  <div style="position:absolute; top:500px; left:80px; right:80px; display:grid; grid-template-columns:1fr 1fr; gap:72px;">
+
+    <!-- LEFT: The problem -->
+    <div>
+      <div class="kicker" style="font-size:13px; letter-spacing:0.38em; color:var(--paper-dim); margin-bottom:16px;">The old game</div>
+      <p class="body" style="font-size:27px; line-height:1.55; margin:0; color:var(--paper-dim);">
+        You can never outsource your own story. Agencies take over your company like a virus and turn you into a shopkeeper building someone else&rsquo;s empire. Consultants hand you a strategy from ChatGPT. Coaches coach coaches to be coaches in an industry feeding on itself. Even the winners burn out or spend their lives optimizing a game that was never worth winning. <em style="font-family:var(--serif); color:var(--paper);">Boring.</em>
+      </p>
+    </div>
+
+    <!-- RIGHT: The answer -->
+    <div>
+      <div class="kicker" style="font-size:13px; letter-spacing:0.38em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow); margin-bottom:16px;">The new game</div>
+      <p class="body" style="font-size:27px; line-height:1.55; margin:0; color:var(--paper-dim);">
+        An epic journey following the pattern of every great story ever told, guided by a family of kinship coaches holding you through everything you need to make your story reality. The pain you walked through becomes the offer. The breakthroughs become your content. The story attracts funding, team, community, <span class="teal">real change</span> &mdash; and the product becomes a ticket into a world powered by a whole new game of purpose that puts business on easy mode.
+      </p>
+    </div>
+  </div>
+
+  <!-- Closing aphorism -->
+  <p class="serif" style="position:absolute; bottom:72px; left:80px; right:80px; font-size:26px; line-height:1.3; text-align:center; color:var(--paper-dim);">
+    All of it is <span class="gold-text">one story away.</span> Or an infinite number of excuses.
+  </p>
+
+  <div class="page-mark">II · The Turning</div>
+  <div class="page-number">03 / 16</div>
+</section>
+<!-- ═══════ 04 — ONE JOURNEY ═══════ -->
+<section data-screen-label="04 One Journey">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>III · One Journey</div>
+
+  <div style="position:absolute; top:200px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:76px; line-height:1; margin:0;">
+      One journey.<br>
+      <span class="gold-text">Four scales.</span>
+    </h2>
+  </div>
+
+  <div style="position:absolute; top:430px; left:80px; right:80px;">
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:32px;">
+
+      <div>
+        <div style="height:88px; display:flex; align-items:center; margin-bottom:18px;">
+          <img src="assets/icons/compass.png" alt="" style="height:78px; width:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div class="kicker" style="margin-bottom:12px;">I · Self</div>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <div class="serif" style="font-size:28px; line-height:1.1;"><span class="teal">Write</span> the book of your life.</div>
+        <p class="body" style="margin-top:16px; font-size:27px; line-height:1.5;">
+          End the old story running you. Exit the nervous system and get into the narrative system. Reprogram your identity around the true story of your life. You can&rsquo;t change what happened, but now you decide what it means and what it turns into.
+        </p>
+      </div>
+
+      <div>
+        <div style="height:88px; display:flex; align-items:center; margin-bottom:18px;">
+          <img src="assets/icons/flag.png" alt="" style="height:84px; width:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div class="kicker" style="margin-bottom:12px;">II · Mission</div>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <div class="serif" style="font-size:28px; line-height:1.1;"><span class="teal">Forge</span> the myth of your future.</div>
+        <p class="body" style="margin-top:16px; font-size:27px; line-height:1.5;">
+          Now that you hold the pen, you dream forward with the full power of a brain that is story all the way down. You forge your purpose and architect a vision so vivid the brain starts building it &mdash; attracting people and funding before you chase them.
+        </p>
+      </div>
+
+      <div>
+        <div style="height:88px; display:flex; align-items:center; margin-bottom:18px;">
+          <img src="assets/icons/bridge.png" alt="" style="height:78px; width:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div class="kicker" style="margin-bottom:12px;">III · Organization</div>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <div class="serif" style="font-size:28px; line-height:1.1;"><span class="teal">Turn</span> business into the ultimate game.</div>
+        <p class="body" style="margin-top:16px; font-size:27px; line-height:1.5;">
+          And because everything is story, your business is a story too. The moment you see that, the game changes completely. The story becomes the strategy, the marketing, the community, the fundraising &mdash; all one thing. Purpose&#8209;driven easiness.
+        </p>
+      </div>
+
+      <div>
+        <div style="height:88px; display:flex; align-items:center; margin-bottom:18px;">
+          <img src="assets/icons/landscape.png" alt="" style="height:78px; width:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div class="kicker" style="margin-bottom:12px;">IV · World</div>
+        <div class="gold-rule" style="margin-bottom:18px;"></div>
+        <div class="serif" style="font-size:28px; line-height:1.1;"><span class="teal">Change</span> the story of the world.</div>
+        <p class="body" style="margin-top:16px; font-size:27px; line-height:1.5;">
+          As the myths running the world collapse, we have the opportunity to rewrite them. Define your field. Lead people into the world you built. Shape what comes next. Your story lived so powerfully it shifts the world outside you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <p class="serif" style="position:absolute; bottom:64px; left:80px; right:80px; font-size:30px; line-height:1.3; text-align:center; color:var(--paper-dim); max-width:1500px; margin:0 auto;">
+    The pen that rewrote a childhood memory is the same pen that <span class="gold-text">architects a regenerative civilization.</span>
+  </p>
+
+  <div class="page-mark">III · One Journey</div>
+  <div class="page-number">04 / 16</div>
+</section>
+<!-- ═══════ 05 — PROOF ═══════ -->
+<section data-screen-label="05 Proof">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>IV · Proof</div>
+
+  <div style="position:absolute; top:200px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:62px; line-height:1; margin:0;">
+      Everyone who committed to the journey<br>
+      <span class="gold-text">walked out transformed.</span>
+    </h2>
+    <p class="body" style="margin-top:24px; font-size:23px; color:var(--paper-dim); max-width:1400px;">
+      100% success rate with everyone who paid and committed. When we gave it away for free it didn&rsquo;t work. <span class="teal">This runs on belief.</span>
+    </p>
+  </div>
+
+  <div style="position:absolute; top:460px; left:80px; right:80px;">
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:40px;">
+
+      <div>
+        <div class="serif gold-text" style="font-size:46px; line-height:1;">$18k<span style="font-size:20px;">/wk</span></div>
+        <div class="kicker" style="margin-top:8px;">1M views</div>
+        <div class="gold-rule" style="margin:18px 0;"></div>
+        <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">Steve Keen</div>
+        <p class="body" style="font-size:19px; line-height:1.5; margin-top:10px;">
+          The economist who predicted the 2008 collapse and nobody would listen, an economic Galileo in exile. After one session he raised $18k from his audience, hit a million views on YouTube in a week, got on the biggest podcasts in the world, and is now in conversation with every political party in the United Kingdom.
+        </p>
+      </div>
+
+      <div>
+        <div class="serif gold-text" style="font-size:46px; line-height:1;">28<span style="font-size:20px;">&nbsp;days</span></div>
+        <div class="kicker" style="margin-top:8px;">Book, brand &amp; mission</div>
+        <div class="gold-rule" style="margin:18px 0;"></div>
+        <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">Michael Haupt</div>
+        <p class="body" style="font-size:19px; line-height:1.5; margin-top:10px;">
+          Decades of studying civilizational collapse with no way to make it land. After the metamyth he realized he was here to author the next world, wrote a 30k-word book in 28 days, launched a whole new brand, and started getting 7k views on videos where he used to get a hundred.
+        </p>
+      </div>
+
+      <div>
+        <div class="serif gold-text" style="font-size:46px; line-height:1;">5<span style="font-size:20px;">yrs</span> &rarr; 3<span style="font-size:20px;">hrs</span></div>
+        <div class="kicker" style="margin-top:8px;">Planetary breakthrough</div>
+        <div class="gold-rule" style="margin:18px 0;"></div>
+        <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">Gareth Thompson</div>
+        <p class="body" style="font-size:19px; line-height:1.5; margin-top:10px;">
+          A doctor who realized the system itself was sick and spent five years searching for the answer. By the origin he had energy coursing through his body, by the quest we had to stop the conversation, he slept for ten hours and woke up having cracked the problem that had been defeating him for half a decade.
+        </p>
+      </div>
+
+      <div>
+        <div class="serif teal" style="font-size:46px; line-height:1; text-shadow:0 0 14px var(--teal-glow);">&rarr;&nbsp;policy</div>
+        <div class="kicker" style="margin-top:8px;">Homeless to fulfillionaire</div>
+        <div class="gold-rule" style="margin:18px 0;"></div>
+        <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">J Friday</div>
+        <p class="body" style="font-size:19px; line-height:1.5; margin-top:10px;">
+          Homeless, carrying a dream of community wealth with no way to make anyone listen. We reminded her she was the storyteller and she went so viral the Scottish government shifted their own policy, built a global community, millions of views, one of the top voices on Substack.
+        </p>
+      </div>
+
+
+    </div>
+  </div>
+
+  <p class="serif" style="position:absolute; bottom:90px; left:80px; right:80px; font-size:22px; line-height:1.4; text-align:center; color:var(--paper-dim); font-style:italic; max-width:1500px; margin:0 auto;">
+    Not anomalies. <span class="gold-text" style="font-style:normal;">Inevitabilities</span> &mdash; once someone stops performing a story and starts living one.
+  </p>
+
+  <div class="page-mark">IV · Proof</div>
+  <div class="page-number">05 / 16</div>
+</section>
+<!-- ═══════ 06 — FIT ═══════ -->
+<section data-screen-label="06 Fit">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>V · The Fit</div>
+
+  <div style="position:absolute; top:200px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:76px; line-height:1; margin:0;">
+      Who do you have to <span class="gold-text">become</span><br>
+      to live your story?
+    </h2>
+    <p class="body" style="margin-top:20px; font-size:22px; color:var(--paper-dim); max-width:1500px; line-height:1.55;">
+      This runs on belief and commitment to your own story. The technology requires participation the way a story requires a reader. <span class="teal">If you are open, this works in hours. If you are performing openness, your excuses will eat you alive.</span>
+    </p>
+  </div>
+
+  <div style="position:absolute; top:480px; left:80px; right:80px; display:grid; grid-template-columns:1fr 1fr; gap:80px;">
+    <div style="position:relative;">
+      <div class="label red" style="margin-bottom:18px;">Walk away if &mdash;</div>
+      <ul class="bullets red" style="gap:14px;">
+        <li style="font-size:22px;">You are waiting for the world to change before you do.</li>
+        <li style="font-size:22px;">You believe the myth of scarcity more than the world&rsquo;s need for your solution.</li>
+        <li style="font-size:22px;">Shame has you playing a background character in somebody else&rsquo;s world.</li>
+        <li style="font-size:22px;">You have made money the villain of your story.</li>
+        <li style="font-size:22px;">You want change &mdash; you are just not ready to be changed.</li>
+      </ul>
+    </div>
+    <div style="position:relative;">
+      <div class="label" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow); margin-bottom:18px;">But if &mdash;</div>
+      <ul class="bullets teal" style="gap:14px;">
+        <li style="font-size:22px;">You know you are on this earth for a reason and you are done pretending otherwise.</li>
+        <li style="font-size:22px;">You have a world&#8209;size solution that needs building, scaling, and spreading.</li>
+        <li style="font-size:22px;">You have killed it in an old game that is killing you and you are ready to play a new one.</li>
+        <li style="font-size:22px;">You are afraid of your own power more than you are afraid of failing.</li>
+        <li style="font-size:22px;">You know another world is possible and are crazy enough to make it real.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="serif" style="position:absolute; bottom:90px; left:80px; right:80px; font-size:28px; text-align:center; color:var(--paper);">
+    Then you are <span class="gold-text">exactly who this is for.</span>
+  </p>
+
+  <div class="page-mark">V · The Fit</div>
+  <div class="page-number">06 / 16</div>
+</section>
+<!-- ═══════ 07 — THE VISION ═══════ -->
+<section data-screen-label="07 The Vision">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>VI · The Vision</div>
+
+  <!-- Hero -->
+  <div style="position:absolute; top:170px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:60px; line-height:1; margin:0; letter-spacing:-0.005em;">
+      What happens when you<br>
+      see your life as a <span class="gold-text">story?</span>
+    </h2>
+  </div>
+
+  <!-- Four escalating sections, two columns -->
+  <div style="position:absolute; top:400px; left:80px; right:80px; bottom:170px; display:grid; grid-template-columns:1fr 1fr; gap:48px 70px;">
+
+    <!-- I · Self -->
+    <div>
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span class="serif gold-text" style="font-size:32px; line-height:1; font-style:italic;">I.</span>
+        <h3 class="serif" style="font-size:30px; line-height:1.08; margin:0; color:var(--paper); letter-spacing:0.005em;">When your life becomes a <span class="gold-text">story,</span></h3>
+      </div>
+      <div class="gold-rule" style="margin-bottom:14px; max-width:80px;"></div>
+      <p class="body" style="font-size:27px; line-height:1.5; margin:0;">
+        things you thought were fixed &mdash; identities, even the dragons outside you &mdash; melt into thresholds you can cross. You rewrite the past and what it means, and reclaim the power to dream your future. You shift from the nervous system you don&rsquo;t control to the narrative system you write yourself. <span class="teal">Master the seven arts of story, and every aspect of your life starts to flow.</span>
+      </p>
+    </div>
+
+    <!-- II · Mission -->
+    <div>
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span class="serif gold-text" style="font-size:32px; line-height:1; font-style:italic;">II.</span>
+        <h3 class="serif" style="font-size:30px; line-height:1.08; margin:0; color:var(--paper); letter-spacing:0.005em;">When your brand evolves into a <span class="gold-text">myth,</span></h3>
+      </div>
+      <div class="gold-rule" style="margin-bottom:14px; max-width:80px;"></div>
+      <p class="body" style="font-size:27px; line-height:1.5; margin:0;">
+        you find a purpose far bigger than you &mdash; a story so magnetic it becomes a quest that pulls you forward into the future. The story becomes the strategy. You stop selling and start storytelling, and scarcity is revealed as a myth. <span class="teal">Content, fundraising, people, community &mdash; all growing from the same source.</span>
+      </p>
+    </div>
+
+    <!-- III · Organization -->
+    <div>
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span class="serif gold-text" style="font-size:32px; line-height:1; font-style:italic;">III.</span>
+        <h3 class="serif" style="font-size:30px; line-height:1.08; margin:0; color:var(--paper); letter-spacing:0.005em;">When you run your organization as a <span class="gold-text">game,</span></h3>
+      </div>
+      <div class="gold-rule" style="margin-bottom:14px; max-width:80px;"></div>
+      <p class="body" style="font-size:27px; line-height:1.5; margin:0;">
+        it gets easier the more you play it. Profit chases purpose. Sales becomes service. Audience becomes customers, customers become community, community becomes co&#8209;creators spreading the quest. <span class="teal">The game of purpose spreads itself into abundant living systems.</span>
+      </p>
+    </div>
+
+    <!-- IV · World -->
+    <div>
+      <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:14px;">
+        <span class="serif gold-text" style="font-size:32px; line-height:1; font-style:italic;">IV.</span>
+        <h3 class="serif" style="font-size:30px; line-height:1.08; margin:0; color:var(--paper); letter-spacing:0.005em;">When you change the story the world <span class="gold-text">runs on,</span></h3>
+      </div>
+      <div class="gold-rule" style="margin-bottom:14px; max-width:80px; background:linear-gradient(90deg, var(--gold), var(--teal)); opacity:0.8;"></div>
+      <p class="body" style="font-size:27px; line-height:1.5; margin:0;">
+        you become the author of the stories that live outside you. The same power that runs your nervous system runs your culture, your economy, your world &mdash; and the force used to manipulate the masses becomes the ultimate force of liberation. <span class="teal">Your story becomes the living proof of a better world.</span> Story begets story, until a movement steps over the dying old fairy tales into an obviously better way to live.
+      </p>
+    </div>
+  </div>
+
+  <!-- Bottom aphorism -->
+  <div style="position:absolute; bottom:60px; left:80px; right:80px; text-align:center;">
+    <div style="display:flex; align-items:center; gap:24px; justify-content:center; margin-bottom:18px;">
+      <div style="height:1px; width:160px; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.65;"></div>
+      <svg width="12" height="12" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"/></svg>
+      <div style="height:1px; width:160px; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.65;"></div>
+    </div>
+    <p class="serif" style="font-size:22px; line-height:1.35; margin:0; color:var(--paper); font-style:italic; max-width:1400px; margin-left:auto; margin-right:auto;">
+      This whole journey is to teach you that your problems are stories &mdash; and your dreams, if believed and told beautifully, are <span class="gold-text" style="font-style:normal;">absolutely possible.</span>
+    </p>
+  </div>
+
+  <div class="page-mark">VI · The Vision</div>
+  <div class="page-number">07 / 16</div>
+</section>
+<!-- ═══════ 08 — THE PATH (wheel, centered) ═══════ -->
+<section data-screen-label="08 The Path">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>VII · The Path</div>
+
+  <!-- Hero centered top -->
+  <div style="position:absolute; top:160px; left:80px; right:80px; text-align:center;">
+    <h2 class="serif" style="font-size:48px; line-height:1.05; margin:0; letter-spacing:-0.005em;">
+      Four initiations.&nbsp; <span class="gold-text">Each one earns the next.</span>
+    </h2>
+    <p class="serif" style="margin-top:18px; font-size:22px; color:var(--paper); font-style:italic;">
+      Behind every threshold <span class="gold-text" style="font-style:normal;">is the gold.</span>
+    </p>
+  </div>
+
+  <!-- WHEEL DIAGRAM - centered at (960, 640) -->
+  <svg viewBox="0 0 1920 1080" style="position:absolute; inset:0; pointer-events:none; z-index:1;">
+    <defs>
+      <radialGradient id="wheelCenterGlow" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#5fe8d3" stop-opacity="0.18"/>
+        <stop offset="55%" stop-color="#5fe8d3" stop-opacity="0.04"/>
+        <stop offset="100%" stop-color="#5fe8d3" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="arcAura" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#c9a85a" stop-opacity="0.55"/>
+        <stop offset="60%" stop-color="#c9a85a" stop-opacity="0.10"/>
+        <stop offset="100%" stop-color="#c9a85a" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="arcAuraTeal" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#5fe8d3" stop-opacity="0.55"/>
+        <stop offset="60%" stop-color="#5fe8d3" stop-opacity="0.10"/>
+        <stop offset="100%" stop-color="#5fe8d3" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="thrAura" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0%" stop-color="#5fe8d3" stop-opacity="0.50"/>
+        <stop offset="60%" stop-color="#5fe8d3" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#5fe8d3" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="travelArc" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%"  stop-color="#5fe8d3" stop-opacity="0.0"/>
+        <stop offset="50%" stop-color="#c9a85a" stop-opacity="0.8"/>
+        <stop offset="100%" stop-color="#5fe8d3" stop-opacity="0.0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Center glow -->
+    <circle cx="960" cy="640" r="280" fill="url(#wheelCenterGlow)"/>
+
+    <!-- 8-pointed compass star at center -->
+    <g transform="translate(960 640)" opacity="0.13">
+      <path d="M0 -220 L8 -8 L220 0 L8 8 L0 220 L-8 8 L-220 0 L-8 -8 Z" fill="#c9a85a"/>
+      <g transform="rotate(45)">
+        <path d="M0 -170 L6 -6 L170 0 L6 6 L0 170 L-6 6 L-170 0 L-6 -6 Z" fill="#c9a85a" opacity="0.6"/>
+      </g>
+    </g>
+
+    <!-- Three rings -->
+    <circle cx="960" cy="640" r="240" fill="none" stroke="#c9a85a" stroke-width="1" opacity="0.55"/>
+    <circle cx="960" cy="640" r="170" fill="none" stroke="#c9a85a" stroke-width="0.5" stroke-dasharray="2 8" opacity="0.32"/>
+    <circle cx="960" cy="640" r="78" fill="none" stroke="#c9a85a" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- 12 spokes -->
+    <g stroke="#c9a85a" stroke-width="0.3" opacity="0.30">
+      <line x1="960" y1="640" x2="960"  y2="400"/>
+      <line x1="960" y1="640" x2="1080" y2="432"/>
+      <line x1="960" y1="640" x2="1168" y2="520"/>
+      <line x1="960" y1="640" x2="1200" y2="640"/>
+      <line x1="960" y1="640" x2="1168" y2="760"/>
+      <line x1="960" y1="640" x2="1080" y2="848"/>
+      <line x1="960" y1="640" x2="960"  y2="880"/>
+      <line x1="960" y1="640" x2="840"  y2="848"/>
+      <line x1="960" y1="640" x2="752"  y2="760"/>
+      <line x1="960" y1="640" x2="720"  y2="640"/>
+      <line x1="960" y1="640" x2="752"  y2="520"/>
+      <line x1="960" y1="640" x2="840"  y2="432"/>
+    </g>
+
+    <!-- Travel arc highlight from top → right -->
+    <path d="M 960 400 A 240 240 0 0 1 1200 640" stroke="url(#travelArc)" stroke-width="2.5" fill="none" opacity="0.75"/>
+
+    <!-- Arc node auras (3 gold + 1 teal for Metamyth) -->
+    <circle cx="960"  cy="400" r="48" fill="url(#arcAura)"/>
+    <circle cx="1200" cy="640" r="48" fill="url(#arcAuraTeal)"/>
+    <circle cx="960"  cy="880" r="48" fill="url(#arcAura)"/>
+    <circle cx="720"  cy="640" r="48" fill="url(#arcAura)"/>
+
+    <!-- Threshold node auras (8) -->
+    <circle cx="1080" cy="432" r="26" fill="url(#thrAura)"/>
+    <circle cx="1168" cy="520" r="26" fill="url(#thrAura)"/>
+    <circle cx="1168" cy="760" r="26" fill="url(#thrAura)"/>
+    <circle cx="1080" cy="848" r="26" fill="url(#thrAura)"/>
+    <circle cx="840"  cy="848" r="26" fill="url(#thrAura)"/>
+    <circle cx="752"  cy="760" r="26" fill="url(#thrAura)"/>
+    <circle cx="752"  cy="520" r="26" fill="url(#thrAura)"/>
+    <circle cx="840"  cy="432" r="26" fill="url(#thrAura)"/>
+
+    <!-- Arc node markers (Metamyth = right, teal-rimmed) -->
+    <circle cx="960"  cy="400" r="17" fill="#062420" stroke="#c9a85a" stroke-width="1.5"/>
+    <circle cx="960"  cy="400" r="6"  fill="#5fe8d3" style="filter:drop-shadow(0 0 8px #5fe8d3)"/>
+    <circle cx="1200" cy="640" r="17" fill="#062420" stroke="#5fe8d3" stroke-width="1.8" style="filter:drop-shadow(0 0 10px rgba(95,232,211,0.6))"/>
+    <circle cx="1200" cy="640" r="7"  fill="#5fe8d3" style="filter:drop-shadow(0 0 10px #5fe8d3)"/>
+    <circle cx="960"  cy="880" r="17" fill="#062420" stroke="#c9a85a" stroke-width="1.5"/>
+    <circle cx="960"  cy="880" r="6"  fill="#5fe8d3" style="filter:drop-shadow(0 0 8px #5fe8d3)"/>
+    <circle cx="720"  cy="640" r="17" fill="#062420" stroke="#c9a85a" stroke-width="1.5"/>
+    <circle cx="720"  cy="640" r="6"  fill="#5fe8d3" style="filter:drop-shadow(0 0 8px #5fe8d3)"/>
+
+    <!-- Threshold node markers -->
+    <g>
+      <circle cx="1080" cy="432" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="1080" cy="432" r="3" fill="#5fe8d3"/>
+      <circle cx="1168" cy="520" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="1168" cy="520" r="3" fill="#5fe8d3"/>
+      <circle cx="1168" cy="760" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="1168" cy="760" r="3" fill="#5fe8d3"/>
+      <circle cx="1080" cy="848" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="1080" cy="848" r="3" fill="#5fe8d3"/>
+      <circle cx="840" cy="848" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="840" cy="848" r="3" fill="#5fe8d3"/>
+      <circle cx="752" cy="760" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="752" cy="760" r="3" fill="#5fe8d3"/>
+      <circle cx="752" cy="520" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="752" cy="520" r="3" fill="#5fe8d3"/>
+      <circle cx="840" cy="432" r="8" fill="#062420" stroke="#c9a85a" stroke-width="1"/>
+      <circle cx="840" cy="432" r="3" fill="#5fe8d3"/>
+    </g>
+  </svg>
+
+  <!-- CENTER caption -->
+  <div style="position:absolute; left:960px; top:640px; transform:translate(-50%,-50%); text-align:center; width:160px; z-index:2;">
+    <div class="kicker" style="font-size:13px; color:var(--gold); letter-spacing:0.42em; opacity:0.85;">— The —</div>
+    <div class="serif gold-text" style="font-size:28px; line-height:1; margin-top:6px; letter-spacing:0.04em;">Journey</div>
+    <div style="display:flex; align-items:center; justify-content:center; gap:6px; margin-top:8px;">
+      <div style="height:1px; width:18px; background:var(--gold); opacity:0.5;"></div>
+      <svg width="9" height="9" viewBox="0 0 20 20"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"/></svg>
+      <div style="height:1px; width:18px; background:var(--gold); opacity:0.5;"></div>
+    </div>
+    <p class="body" style="font-size:13px; margin-top:6px; color:var(--paper-dim); font-family:var(--serif); font-style:italic; line-height:1.4;">begin where you are, return as the author</p>
+  </div>
+
+  <!-- ARC LABELS — 4 stations -->
+  <!-- Top: Originstory -->
+  <div style="position:absolute; left:960px; top:332px; transform:translate(-50%,-50%); width:240px; text-align:center; z-index:2;">
+    <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc I</div>
+    <div class="serif gold-text" style="font-size:26px; line-height:1.05; margin-top:4px; letter-spacing:0.01em;">Originstory</div>
+    <div class="kicker" style="font-size:13px; color:var(--paper-dim); margin-top:4px; letter-spacing:0.36em;">WRITE · 30 DAYS</div>
+  </div>
+  <!-- Right: Metamyth (TEAL highlight) -->
+  <div style="position:absolute; left:1305px; top:640px; transform:translate(0,-50%); width:220px; text-align:left; z-index:2;">
+    <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">Arc II</div>
+    <div class="serif teal" style="font-size:26px; line-height:1.05; margin-top:4px; letter-spacing:0.01em; text-shadow:0 0 14px var(--teal-glow);">Metamyth</div>
+    <div class="kicker" style="font-size:13px; color:var(--paper-dim); margin-top:4px; letter-spacing:0.36em;">FORGE · 2 MONTHS</div>
+  </div>
+  <!-- Bottom: MythOS -->
+  <div style="position:absolute; left:960px; top:948px; transform:translate(-50%,-50%); width:240px; text-align:center; z-index:2;">
+    <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc III</div>
+    <div class="serif gold-text" style="font-size:26px; line-height:1.05; margin-top:4px; letter-spacing:0.01em;">MythOS</div>
+    <div class="kicker" style="font-size:13px; color:var(--paper-dim); margin-top:4px; letter-spacing:0.36em;">PLAY · 3 MONTHS</div>
+  </div>
+  <!-- Left: StoryLiving -->
+  <div style="position:absolute; right:1305px; top:640px; transform:translate(0,-50%); width:220px; text-align:right; z-index:2;">
+    <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc IV</div>
+    <div class="serif gold-text" style="font-size:26px; line-height:1.05; margin-top:4px; letter-spacing:0.01em;">StoryLiving</div>
+    <div class="kicker" style="font-size:13px; color:var(--paper-dim); margin-top:4px; letter-spacing:0.36em;">AUTHOR · ONGOING</div>
+  </div>
+
+  <!-- THRESHOLD QUESTIONS — placed outside the outer ring at radius ~330 -->
+  <!-- 1 o'clock (between Arc I → Arc II): Can you end the old story? -->
+  <div style="position:absolute; left:1158px; top:348px; transform:translate(-50%,-50%); width:150px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can you end the old story?</p>
+  </div>
+  <!-- 2 o'clock: Can you embody the new character? -->
+  <div style="position:absolute; left:1246px; top:475px; transform:translate(-50%,-50%); width:180px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can you embody the new character?</p>
+  </div>
+  <!-- 4 o'clock (between Arc II → Arc III): Can your transformation serve others? -->
+  <div style="position:absolute; left:1246px; top:805px; transform:translate(-50%,-50%); width:180px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can your transformation serve others?</p>
+  </div>
+  <!-- 5 o'clock: Can money become a plot device? -->
+  <div style="position:absolute; left:1158px; top:932px; transform:translate(-50%,-50%); width:150px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can money become a plot device?</p>
+  </div>
+  <!-- 7 o'clock (between Arc III → Arc IV): Can business become a game? -->
+  <div style="position:absolute; left:762px; top:932px; transform:translate(-50%,-50%); width:150px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can business become a game?</p>
+  </div>
+  <!-- 8 o'clock: Can your team carry the story? -->
+  <div style="position:absolute; left:674px; top:805px; transform:translate(-50%,-50%); width:180px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can your team carry the story?</p>
+  </div>
+  <!-- 10 o'clock: Can it create more than it consumes? -->
+  <div style="position:absolute; left:674px; top:475px; transform:translate(-50%,-50%); width:180px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can it create more than it consumes?</p>
+  </div>
+  <!-- 11 o'clock: Can your story shape the world? -->
+  <div style="position:absolute; left:762px; top:348px; transform:translate(-50%,-50%); width:150px; text-align:center; z-index:2;">
+    <p class="body" style="font-size:18px; line-height:1.3; margin:0; color:var(--paper); font-family:var(--serif); font-style:italic; text-shadow:0 0 12px rgba(95,232,211,0.18);">Can your story shape the world?</p>
+  </div>
+
+  <div class="page-mark">VII · The Path</div>
+  <div class="page-number">08 / 16</div>
+</section>
+<!-- ═══════ 09 — COUNCIL ═══════ -->
+<section data-screen-label="09 Council">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>VIII · The Council</div>
+
+  <div style="position:absolute; top:190px; left:80px;">
+    <h2 class="serif" style="font-size:76px; line-height:1; margin:0;">
+      Your <span class="gold-text">guides.</span>
+    </h2>
+    <p class="body" style="margin-top:20px; font-size:20px; max-width:1300px; line-height:1.55;">
+      Every one of them did the journey first. Left the old system, broke with the old story, and walked the path back to bring you with them. <span class="teal">Their qualification is the crossing they already made.</span>
+    </p>
+  </div>
+
+  <div style="position:absolute; top:420px; left:80px; right:80px; display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+
+    <div class="card" style="padding:24px 22px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div style="position:relative; aspect-ratio:3/2; border:1px solid rgba(201,168,90,0.35); overflow:hidden; margin-bottom:18px; background:radial-gradient(ellipse at 50% 30%, rgba(95,232,211,0.08), transparent 60%), repeating-linear-gradient(135deg, rgba(241,234,215,0.04) 0 2px, transparent 2px 14px);">
+        <image-slot id="guide-zach" shape="rect" placeholder="Zachary portrait" style="position:absolute; inset:0; width:100%; height:100%;"></image-slot>
+        <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; font-family:ui-monospace,monospace; font-size:13.5px; color:var(--paper-dim); pointer-events:none;">
+          <span>·  ZM</span><span>I</span>
+        </div>
+      </div>
+      <div class="kicker" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow);">Authorship</div>
+      <div class="serif" style="font-size:28px; line-height:1.1; margin-top:6px;">Zachary Marlow</div>
+      <div class="serif gold-text" style="font-size:19px; line-height:1.1; margin-top:8px; font-style:italic;">Envision your future.</div>
+      <p class="body" style="font-size:19px; margin-top:10px; line-height:1.5;">The one who sees the full pattern of your life where you see chaos &mdash; and forges it into the story that runs everything you build.</p>
+      <p class="body" style="font-size:18px; margin-top:12px; color:var(--paper-dim); line-height:1.5;">Forged the methodology across a decade and five continents, from nothing.</p>
+    </div>
+
+    <div class="card" style="padding:24px 22px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div style="position:relative; aspect-ratio:3/2; border:1px solid rgba(201,168,90,0.35); overflow:hidden; margin-bottom:18px; background:radial-gradient(ellipse at 50% 30%, rgba(95,232,211,0.08), transparent 60%), repeating-linear-gradient(135deg, rgba(241,234,215,0.04) 0 2px, transparent 2px 14px);">
+        <image-slot id="guide-cat" shape="rect" placeholder="Cattaleya portrait" style="position:absolute; inset:0; width:100%; height:100%;"></image-slot>
+        <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; font-family:ui-monospace,monospace; font-size:13.5px; color:var(--paper-dim); pointer-events:none;">
+          <span>·  CM</span><span>II</span>
+        </div>
+      </div>
+      <div class="kicker" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow);">Embodiment</div>
+      <div class="serif" style="font-size:28px; line-height:1.1; margin-top:6px;">Cattaleya Morgan</div>
+      <div class="serif gold-text" style="font-size:19px; line-height:1.1; margin-top:8px; font-style:italic;">Embody your mission.</div>
+      <p class="body" style="font-size:19px; margin-top:10px; line-height:1.5;">Grounds you so deeply in your vision that selling becomes serving and leading becomes ceremony.</p>
+      <p class="body" style="font-size:18px; margin-top:12px; color:var(--paper-dim); line-height:1.5;">Big tech startups and impossible missions, until hundreds of ceremonies with indigenous elders showed her it is us who need to change.</p>
+    </div>
+
+    <div class="card" style="padding:24px 22px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div style="position:relative; aspect-ratio:3/2; border:1px solid rgba(201,168,90,0.35); overflow:hidden; margin-bottom:18px; background:radial-gradient(ellipse at 50% 30%, rgba(95,232,211,0.08), transparent 60%), repeating-linear-gradient(135deg, rgba(241,234,215,0.04) 0 2px, transparent 2px 14px);">
+        <image-slot id="guide-simon" shape="rect" placeholder="Simon portrait" style="position:absolute; inset:0; width:100%; height:100%;"></image-slot>
+        <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; font-family:ui-monospace,monospace; font-size:13.5px; color:var(--paper-dim); pointer-events:none;">
+          <span>·  SQ</span><span>III</span>
+        </div>
+      </div>
+      <div class="kicker" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow);">Abundance</div>
+      <div class="serif" style="font-size:28px; line-height:1.1; margin-top:6px;">Simon Quarmby</div>
+      <div class="serif gold-text" style="font-size:19px; line-height:1.1; margin-top:8px; font-style:italic;">Fund your purpose.</div>
+      <p class="body" style="font-size:19px; margin-top:10px; line-height:1.5;">Structures your organization and capital so the mission sustains itself the way a forest does.</p>
+      <p class="body" style="font-size:18px; margin-top:12px; color:var(--paper-dim); line-height:1.5;">Engineered a billion&#8209;dollar save for Amazon, left for the real rainforest, learned how nature flows value through living systems.</p>
+    </div>
+
+    <div class="card" style="padding:24px 22px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div style="position:relative; aspect-ratio:3/2; border:1px solid rgba(201,168,90,0.35); overflow:hidden; margin-bottom:18px; background:radial-gradient(ellipse at 50% 30%, rgba(95,232,211,0.08), transparent 60%), repeating-linear-gradient(135deg, rgba(241,234,215,0.04) 0 2px, transparent 2px 14px);">
+        <image-slot id="guide-gertie" shape="rect" placeholder="Gertie portrait" style="position:absolute; inset:0; width:100%; height:100%;"></image-slot>
+        <div style="position:absolute; top:12px; left:12px; right:12px; display:flex; justify-content:space-between; font-family:ui-monospace,monospace; font-size:13.5px; color:var(--paper-dim); pointer-events:none;">
+          <span>·  GF</span><span>IV</span>
+        </div>
+      </div>
+      <div class="kicker" style="color:var(--teal); text-shadow:0 0 10px var(--teal-glow);">Belonging</div>
+      <div class="serif" style="font-size:28px; line-height:1.1; margin-top:6px;">Gertie Farenas</div>
+      <div class="serif gold-text" style="font-size:19px; line-height:1.1; margin-top:8px; font-style:italic;">Attract your community.</div>
+      <p class="body" style="font-size:19px; margin-top:10px; line-height:1.5;">Finds your people and loves them into a community that feels alive.</p>
+      <p class="body" style="font-size:18px; margin-top:12px; color:var(--paper-dim); line-height:1.5;">Found her own story in the most hostile conditions imaginable, and built belonging from nothing. Now she does the same for yours.</p>
+    </div>
+  </div>
+
+  <div class="page-mark">VIII · The Council</div>
+  <div class="page-number">09 / 16</div>
+</section>
+<!-- ═══════ 10 — ARC I · ORIGINSTORY ═══════ -->
+<section data-screen-label="10 Originstory">
+  <div class="frame"><i></i><b></b></div>
+
+  <!-- Running heads -->
+  <div style="position:absolute; top:108px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; gap:24px;">
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc I</div>
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.45;"></div>
+    </div>
+    <div class="kicker" style="font-family:var(--serif); font-size:16px; letter-spacing:0.32em; text-transform:none; font-style:italic; color:var(--paper-dim);">— Write the book of your life —</div>
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.45;"></div>
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Originstory</div>
+    </div>
+  </div>
+
+  <!-- Center spine -->
+  <div aria-hidden="true" style="position:absolute; top:170px; bottom:90px; left:50%; width:1px; background:linear-gradient(180deg, transparent, rgba(201,168,90,0.30) 14%, rgba(201,168,90,0.30) 86%, transparent); transform:translateX(-0.5px); z-index:3;"></div>
+  <div aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; z-index:4;">
+    <svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.7"/></svg>
+  </div>
+
+  <!-- LEFT PAGE -->
+  <div style="position:absolute; top:200px; left:130px; right:50%; padding-right:80px;">
+
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:18px;">
+      <span class="serif gold-text" style="font-size:54px; line-height:1; font-style:italic; letter-spacing:-0.01em; padding-right:8px;">I</span>
+      <span style="width:38px; height:1px; background:var(--gold); opacity:0.6; align-self:center;"></span>
+      <span class="serif gold-text" style="font-size:38px; line-height:1; letter-spacing:0.14em; text-transform:uppercase;">Originstory</span>
+    </div>
+
+    <h2 class="serif" style="font-size:52px; line-height:1.04; margin:0 0 24px; letter-spacing:-0.005em;">
+      Write the book<br>
+      of your <span class="gold-text">life.</span>
+    </h2>
+
+    <div style="display:flex; gap:36px; margin-bottom:26px; align-items:baseline;">
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Investment</div>
+        <div class="serif gold-text" style="font-size:36px; line-height:1;">$2,500</div>
+      </div>
+      <div style="width:1px; height:34px; background:var(--gold); opacity:0.4;"></div>
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Duration</div>
+        <div class="serif" style="font-size:22px; line-height:1.2;">30 days</div>
+      </div>
+    </div>
+
+    <!-- Drop cap body -->
+    <div style="position:relative;">
+      <span class="serif gold-text" style="float:left; font-size:108px; line-height:0.82; padding:6px 16px 0 0; font-style:italic;">A</span>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto;"> self-guided initiation into the seven arts of storytelling that reprograms your narrative operating system. Your brain has been writing your life on autopilot, and never once asked permission. The Origin is where you read that book for the first time, meet the author, and take the pen back. Rewrite the story and reality rewrites with it &mdash; they run on the same hardware. <em style="font-family:var(--serif); color:var(--paper);">That is the science.</em> It feels like waking up inside a dream you can suddenly steer &mdash; <em style="font-family:var(--serif); color:var(--paper);">that is the magic.</em> Seven chapters, each a threshold unlocking the next &mdash; <em style="font-family:var(--serif); color:var(--paper);">that is the game.</em></p>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto; margin-top:16px;">It opens with a session with <span class="teal">Cattaleya,</span> runs through seven days of guided initiation, and seals with a session with <span class="teal">Zachary</span> &mdash; the old story ended, the first chapter of the new one written. <span class="teal">You can feel the shift in hours.</span></p>
+    </div>
+  </div>
+
+  <!-- RIGHT PAGE -->
+  <div style="position:absolute; top:200px; left:50%; right:90px; padding-left:70px;">
+
+    <!-- WHAT YOU CARRY OUT -->
+    <div class="label" style="margin-bottom:24px;">What you carry out</div>
+
+    <div style="display:flex; flex-direction:column; gap:24px;">
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/scroll.png" alt="" style="width:70px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.18));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">Your Origin Story</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Excavated, chapter by chapter, and reflected back to you so you can read it for the first time.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/shield-leaf.png" alt="" style="width:70px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.18));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">The Embodied Mission Blueprint</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Your core values and the foundation of your story, made structural.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/sprout.png" alt="" style="width:70px; height:auto; filter:drop-shadow(0 0 14px rgba(95,232,211,0.30));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--teal); text-shadow:0 0 12px var(--teal-glow);">Your VoiceSeed</div>
+            <div style="height:1px; flex:1; background:var(--teal); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Your voice and language encoded so AI can finally speak in your actual values and your actual voice.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT SHIFTS -->
+    <div style="margin-top:30px; padding-top:18px; border-top:1px solid rgba(201,168,90,0.3);">
+      <div class="label" style="margin-bottom:16px;">What shifts</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:start;">
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">AUTOPILOT</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">You take the pen.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">YOUR PAST</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Becomes your origin.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">YOUR VOICE</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Finally sounds like you.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone -->
+    <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,168,90,0.35); display:flex; align-items:center; gap:18px;">
+      <svg width="15" height="15" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"></path></svg>
+      <p class="serif" style="font-size:24px; line-height:1.3; margin:0; font-style:italic;">
+        The story was always there. <span class="gold-text" style="font-style:normal;">Now you can see it.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="page-mark">Arc I · Originstory</div>
+  <div class="page-number">10 / 16</div>
+</section>
+<!-- ═══════ 11 — ARC II · METAMYTH ═══════ -->
+<section data-screen-label="11 Metamyth">
+  <div class="frame"><i></i><b></b></div>
+
+  <!-- Running heads -->
+  <div style="position:absolute; top:108px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; gap:24px;">
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc II</div>
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.45;"></div>
+    </div>
+    <div class="kicker" style="font-family:var(--serif); font-size:16px; letter-spacing:0.32em; text-transform:none; font-style:italic; color:var(--paper-dim);">— Forge the myth of your future —</div>
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.45;"></div>
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Metamyth</div>
+    </div>
+  </div>
+
+  <!-- Center spine -->
+  <div aria-hidden="true" style="position:absolute; top:170px; bottom:90px; left:50%; width:1px; background:linear-gradient(180deg, transparent, rgba(201,168,90,0.30) 14%, rgba(201,168,90,0.30) 86%, transparent); transform:translateX(-0.5px); z-index:3;"></div>
+  <div aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; z-index:4;">
+    <svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.7"/></svg>
+  </div>
+
+  <!-- LEFT PAGE -->
+  <div style="position:absolute; top:200px; left:130px; right:50%; padding-right:80px;">
+
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:18px;">
+      <span class="serif gold-text" style="font-size:54px; line-height:1; font-style:italic; letter-spacing:-0.01em; padding-right:8px;">II</span>
+      <span style="width:38px; height:1px; background:var(--gold); opacity:0.6; align-self:center;"></span>
+      <span class="serif gold-text" style="font-size:38px; line-height:1; letter-spacing:0.14em; text-transform:uppercase;">Metamyth</span>
+    </div>
+
+    <h2 class="serif" style="font-size:52px; line-height:1.04; margin:0 0 28px; letter-spacing:-0.005em;">
+      Forge the myth<br>
+      of your <span class="gold-text">future.</span>
+    </h2>
+
+    <div style="display:flex; gap:36px; margin-bottom:28px; align-items:baseline;">
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Investment</div>
+        <div class="serif gold-text" style="font-size:36px; line-height:1;">$5,000<span style="font-size:20px;">/mo</span></div>
+      </div>
+      <div style="width:1px; height:34px; background:var(--gold); opacity:0.4;"></div>
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Cadence</div>
+        <div class="serif" style="font-size:22px; line-height:1.2;">Monthly · with the council</div>
+      </div>
+    </div>
+
+    <!-- Drop cap body -->
+    <div style="position:relative;">
+      <span class="serif gold-text" style="float:left; font-size:112px; line-height:0.82; padding:6px 16px 0 0; font-style:italic;">T</span>
+      <p class="body" style="font-size:27px; line-height:1.55; text-align:justify; hyphens:auto;">he same story system you just cracked open in your brain runs civilization &mdash; so we rewrite it at the scale of the world. The metamyth is the ancient power to author reality and project it forward, a guided journey that turns the mythic pattern of your life into a story big enough to change the world. Your biggest struggles become the narrative tensions that attract people into a future they can taste and fund. Each session trains your <span class="teal">Story Intelligence</span> into the operating system that runs your brand, content, offer, and life.</p>
+      <p class="body" style="font-size:27px; line-height:1.55; text-align:justify; hyphens:auto; margin-top:16px;">We wield the <span class="gold-text">Sword Protocol</span> to forge an offer sharp enough to cut through the bullshit to the heart of your solution &mdash; one that scales from personal to planetary.</p>
+    </div>
+  </div>
+
+  <!-- RIGHT PAGE -->
+  <div style="position:absolute; top:200px; left:50%; right:90px; padding-left:70px;">
+
+    <div class="label" style="margin-bottom:20px;">What we build together</div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div style="display:grid; grid-template-columns:72px 1fr; gap:20px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:72px;">
+          <img src="assets/icons/scroll.png" alt="" style="width:60px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">The Metamyth Source Manuscript</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">The full epic of your life forged into the future that becomes inevitable when you live it.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:72px 1fr; gap:20px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:72px;">
+          <img src="assets/icons/sword.png" alt="" style="width:54px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">The Sword Protocol</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Your guide to forging your own offer &mdash; your transformation packaged as the journey others pay to walk.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:72px 1fr; gap:20px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:72px;">
+          <img src="assets/icons/crystal-ball.png" alt="" style="width:58px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">A fundable vision</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">The narrative that makes investors lean in, and the economics to back it up.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:72px 1fr; gap:20px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:72px;">
+          <img src="assets/icons/chalice.png" alt="" style="width:56px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:22px; line-height:1.1; color:var(--paper);">Your Story System</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">An AI trained on your entire journey, sessions, origin, voice, values. Always available. Always in context.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:72px 1fr; gap:20px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:72px;">
+          <img src="assets/icons/wizard-hat.png" alt="" style="width:56px; height:auto; filter:drop-shadow(0 0 14px rgba(95,232,211,0.30));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:4px;">
+            <div class="serif" style="font-size:22px; line-height:1.1; color:var(--teal); text-shadow:0 0 12px var(--teal-glow);">Lifetime access</div>
+            <div style="height:1px; flex:1; background:var(--teal); opacity:0.4; margin-bottom:4px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">To future Metamyth technology and community, because you were here first.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What shifts -->
+    <div style="margin-top:30px; padding-top:18px; border-top:1px solid rgba(201,168,90,0.3);">
+      <div class="label" style="margin-bottom:16px;">What shifts</div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:start;">
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">SCARCITY</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Revealed as a myth.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">SELLING</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Becomes serving.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">YOUR STRUGGLE</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Becomes the strategy.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone -->
+    <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,168,90,0.35); display:flex; align-items:center; gap:18px;">
+      <svg width="15" height="15" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 10.8 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"></path></svg>
+      <p class="serif" style="font-size:24px; line-height:1.3; margin:0; font-style:italic;">
+        Everything is one story away. <span class="gold-text" style="font-style:normal;">And now you hold the pen.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="page-mark">Arc II · Metamyth</div>
+  <div class="page-number">11 / 16</div>
+</section>
+<!-- ═══════ 12 — ARC III · MYTHOS ═══════ -->
+<section data-screen-label="12 MythOS">
+  <div class="frame"><i></i><b></b></div>
+
+  <!-- Running heads -->
+  <div style="position:absolute; top:108px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; gap:24px;">
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc III</div>
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.45;"></div>
+    </div>
+    <div class="kicker" style="font-family:var(--serif); font-size:16px; letter-spacing:0.32em; text-transform:none; font-style:italic; color:var(--paper-dim);">— MythOS: the narrative operating system that turns your business into the ultimate game —</div>
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.45;"></div>
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">MythOS</div>
+    </div>
+  </div>
+
+  <!-- Center spine -->
+  <div aria-hidden="true" style="position:absolute; top:170px; bottom:90px; left:50%; width:1px; background:linear-gradient(180deg, transparent, rgba(201,168,90,0.30) 14%, rgba(201,168,90,0.30) 86%, transparent); transform:translateX(-0.5px); z-index:3;"></div>
+  <div aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; z-index:4;">
+    <svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.7"/></svg>
+  </div>
+
+  <!-- LEFT PAGE -->
+  <div style="position:absolute; top:200px; left:130px; right:50%; padding-right:80px;">
+
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:18px;">
+      <span class="serif gold-text" style="font-size:54px; line-height:1; font-style:italic; letter-spacing:-0.01em; padding-right:8px;">III</span>
+      <span style="width:38px; height:1px; background:var(--gold); opacity:0.6; align-self:center;"></span>
+      <span class="serif gold-text" style="font-size:38px; line-height:1; letter-spacing:0.14em; text-transform:uppercase;">MythOS</span>
+    </div>
+
+    <h2 class="serif" style="font-size:46px; line-height:1.04; margin:0 0 24px; letter-spacing:-0.005em;">
+      Turn business into a game<br>
+      that <span class="gold-text">spreads itself</span> on purpose.
+    </h2>
+
+    <div style="display:flex; gap:36px; margin-bottom:26px; align-items:baseline;">
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Investment</div>
+        <div class="serif gold-text" style="font-size:36px; line-height:1;">$10,000<span style="font-size:20px;">/mo</span></div>
+      </div>
+      <div style="width:1px; height:34px; background:var(--gold); opacity:0.4;"></div>
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Cadence</div>
+        <div class="serif" style="font-size:20px; line-height:1.2;">3 months · full council</div>
+      </div>
+    </div>
+
+    <!-- Drop cap body -->
+    <div style="position:relative;">
+      <span class="serif gold-text" style="float:left; font-size:108px; line-height:0.82; padding:6px 16px 0 0; font-style:italic;">O</span>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto;">K &mdash; you ended the old story, traveled to the future and back, and now you need others to play with you and make that purpose pay. Because everything is story, your business is a story too. The moment you see that, the game changes: you stop grinding and start playing. Story becomes the strategy, the marketing, the brand, the community, the fundraising &mdash; <em style="font-family:var(--serif); color:var(--paper);">all one thing.</em></p>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto; margin-top:14px;">One spiral where consumers become customers become co&#8209;creators in something none of you could build alone &mdash; a co&#8209;op game that gets easier the more people play it. Organizations that grow the way forests grow, each layer feeding the next. <span class="teal">Purpose&#8209;driven easiness.</span></p>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto; margin-top:14px;">We teach the forbidden art of brands that spread like movements without ads, design self&#8209;organizing systems, and craft capital architecture that flows resources into a living ecosystem.</p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT PAGE -->
+  <div style="position:absolute; top:200px; left:50%; right:90px; padding-left:70px;">
+
+    <div class="label" style="margin-bottom:28px;">What goes live in 90 days</div>
+
+    <div style="display:flex; flex-direction:column; gap:24px;">
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/megaphone.png" alt="" style="width:66px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">A living content system</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Systematic storytelling running on your voice across every platform.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/fountain.png" alt="" style="width:64px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">A self-spreading offer</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">The transformation is the marketing. The story carries itself.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/pearl.png" alt="" style="width:60px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">Capital that finds you</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">The financial narrative that makes you undeniable to the investors who get it.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/council.png" alt="" style="width:68px; height:auto; filter:drop-shadow(0 0 14px rgba(95,232,211,0.30));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--teal); text-shadow:0 0 12px var(--teal-glow);">A team running the same story</div>
+            <div style="height:1px; flex:1; background:var(--teal); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Everyone pulling in one direction. Leaders who create leaders.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What shifts -->
+    <div style="margin-top:28px; padding-top:18px; border-top:1px solid rgba(201,168,90,0.3);">
+      <div class="label" style="margin-bottom:16px;">What shifts</div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:start;">
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">GRINDING</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Becomes playing.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">CUSTOMERS</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Become co&#8209;creators.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">YOUR BRAND</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Spreads like a movement.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone line -->
+    <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,168,90,0.35); display:flex; align-items:center; gap:18px;">
+      <svg width="15" height="15" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"></path></svg>
+      <p class="serif" style="font-size:24px; line-height:1.3; margin:0; font-style:italic;">
+        A game of purpose that gets <span class="gold-text" style="font-style:normal;">easier</span> the more people play it.
+      </p>
+    </div>
+  </div>
+
+  <div class="page-mark">Arc III · MythOS</div>
+  <div class="page-number">12 / 16</div>
+</section>
+<!-- ═══════ 13 — ARC IV · STORYLIVING ═══════ -->
+<section data-screen-label="13 StoryLiving">
+  <div class="frame"><i></i><b></b></div>
+
+  <!-- Running heads -->
+  <div style="position:absolute; top:108px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; gap:24px;">
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">Arc IV</div>
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.45;"></div>
+    </div>
+    <div class="kicker" style="font-family:var(--serif); font-size:16px; letter-spacing:0.32em; text-transform:none; font-style:italic; color:var(--paper-dim);">— Change the story of the world —</div>
+    <div style="flex:1; display:flex; align-items:center; gap:18px;">
+      <div style="height:1px; flex:1; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.45;"></div>
+      <div class="kicker" style="font-size:13.5px; letter-spacing:0.42em;">StoryLiving</div>
+    </div>
+  </div>
+
+  <!-- Center spine -->
+  <div aria-hidden="true" style="position:absolute; top:170px; bottom:90px; left:50%; width:1px; background:linear-gradient(180deg, transparent, rgba(201,168,90,0.30) 14%, rgba(201,168,90,0.30) 86%, transparent); transform:translateX(-0.5px); z-index:3;"></div>
+  <div aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:32px; height:32px; background:var(--ink); display:flex; align-items:center; justify-content:center; z-index:4;">
+    <svg width="22" height="22" viewBox="0 0 20 20"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.7"/></svg>
+  </div>
+
+  <!-- LEFT PAGE -->
+  <div style="position:absolute; top:200px; left:130px; right:50%; padding-right:80px;">
+
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:18px;">
+      <span class="serif gold-text" style="font-size:54px; line-height:1; font-style:italic; letter-spacing:-0.01em; padding-right:8px;">IV</span>
+      <span style="width:38px; height:1px; background:var(--gold); opacity:0.6; align-self:center;"></span>
+      <span class="serif gold-text" style="font-size:38px; line-height:1; letter-spacing:0.14em; text-transform:uppercase;">StoryLiving</span>
+    </div>
+
+    <h2 class="serif" style="font-size:64px; line-height:1; margin:0 0 26px; letter-spacing:-0.005em;">
+      <span class="gold-text">Author reality.</span>
+    </h2>
+
+    <div style="display:flex; gap:36px; margin-bottom:26px; align-items:baseline;">
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Access</div>
+        <div class="serif teal" style="font-size:26px; line-height:1;">By invitation</div>
+      </div>
+      <div style="width:1px; height:32px; background:var(--gold); opacity:0.4;"></div>
+      <div>
+        <div class="kicker" style="font-size:13.5px; margin-bottom:6px;">Structure</div>
+        <div class="serif" style="font-size:22px; line-height:1.2;">Value-flow</div>
+      </div>
+    </div>
+
+    <!-- Drop cap body -->
+    <div style="position:relative;">
+      <span class="serif gold-text" style="float:left; font-size:108px; line-height:0.82; padding:6px 16px 0 0; font-style:italic;">I</span>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto;">f you follow the thread far enough, <em style="font-family:var(--serif); color:var(--paper);">you become the story.</em> As the old story collapses, legends are rising to lead the way into another world. Our quest is to change the stories that shape reality itself &mdash; wielding the same power demagogues and cult brands use to seize control, to build something better.</p>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto; margin-top:14px;">StoryLiving is where you embody your vision fulltime, in a cooperative adventure to build the change you want to see. <span class="teal">You earned this.</span> Every threshold you crossed, every arc you completed, led here.</p>
+      <p class="body" style="font-size:27px; line-height:1.5; text-align:justify; hyphens:auto; margin-top:14px;">At this level we are all in on your story &mdash; elevating your media into cinema, crafting your solutions as living expressions of your vision, hosting adventure and ceremony retreats in Colombia. We partner directly on a launch, a raise, a campaign and share in the treasure &mdash; <span class="teal">because your story is now our story.</span></p>
+    </div>
+  </div>
+
+  <!-- RIGHT PAGE -->
+  <div style="position:absolute; top:200px; left:50%; right:90px; padding-left:70px;">
+
+    <div class="label" style="margin-bottom:24px;">What opens up</div>
+
+    <div style="display:flex; flex-direction:column; gap:24px;">
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/butterfly.png" alt="" style="width:66px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">Cinematic storytelling</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Your story on screen &mdash; documentary, narrative, episodic, taking people into the world you built.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/fire.png" alt="" style="width:62px; height:auto; filter:drop-shadow(0 0 14px rgba(201,168,90,0.20));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--paper);">Adventure &amp; ceremony</div>
+            <div style="height:1px; flex:1; background:var(--gold); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">Retreats and residency in the heart of the world &mdash; with the elders and the land that holds it.</p>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:80px 1fr; gap:22px; align-items:start;">
+        <div style="display:flex; align-items:center; justify-content:center; height:80px;">
+          <img src="assets/icons/globe.png" alt="" style="width:66px; height:auto; filter:drop-shadow(0 0 14px rgba(95,232,211,0.30));">
+        </div>
+        <div>
+          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:6px;">
+            <div class="serif" style="font-size:24px; line-height:1.1; color:var(--teal); text-shadow:0 0 12px var(--teal-glow);">The Federation</div>
+            <div style="height:1px; flex:1; background:var(--teal); opacity:0.4; margin-bottom:6px;"></div>
+          </div>
+          <p class="body" style="font-size:19px; line-height:1.5; color:var(--paper-dim); margin:0;">A planetary network of missions rewriting the source code of the world together &mdash; each one a living proof that another world is possible.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What shifts -->
+    <div style="margin-top:30px; padding-top:18px; border-top:1px solid rgba(201,168,90,0.3);">
+      <div class="label" style="margin-bottom:16px;">What shifts</div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; align-items:start;">
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">YOUR VISION</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">You live it fulltime.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--gold);">YOUR STORY</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Becomes living proof.</p>
+        </div>
+        <div style="text-align:center;">
+          <div class="kicker" style="font-size:12.5px; letter-spacing:0.22em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">YOUR MISSION</div>
+          <p class="body" style="font-size:18px; margin-top:6px; color:var(--paper); font-family:var(--serif); font-style:italic; line-height:1.3;">Joins a federation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone -->
+    <div style="margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,168,90,0.35); display:flex; align-items:center; gap:18px;">
+      <svg width="15" height="15" viewBox="0 0 20 20" style="flex-shrink:0;"><path d="M10 0 C10.8 8 12 9.2 20 10 C12 10.8 10.8 12 10 20 C9.2 12 8 10.8 0 10 C8 9.2 9.2 8 10 0 Z" fill="#c9a85a" opacity="0.85"></path></svg>
+      <p class="serif" style="font-size:24px; line-height:1.3; margin:0; font-style:italic;">
+        Take on the stories that <span class="gold-text" style="font-style:normal;">shape the world.</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="page-mark">Arc IV · StoryLiving</div>
+  <div class="page-number">13 / 16</div>
+</section>
+<!-- ═══════ 14 — PRICING ═══════ -->
+<section data-screen-label="14 Pricing">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:120px; left:80px;" class="eyebrow"><span class="dot"></span>IX · The Investment</div>
+
+  <div style="position:absolute; top:200px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:76px; line-height:1; margin:0;">
+      Each arc produces<br>
+      what <span class="gold-text">funds the next.</span>
+    </h2>
+  </div>
+
+  <div style="position:absolute; top:560px; left:80px; right:80px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px;">
+
+    <div class="card" style="padding:36px 28px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="kicker">Arc I</div>
+      <div class="serif" style="font-size:34px; margin-top:8px;">Originstory</div>
+      <div class="gold-rule" style="margin:22px 0;"></div>
+      <div class="serif gold-text" style="font-size:60px; line-height:1;">$2,500</div>
+      <p class="body" style="font-size:19px; color:var(--paper-dim); margin-top:8px;">30 days</p>
+      <p class="body" style="font-size:22px; margin-top:24px;">Write the book of your life.</p>
+    </div>
+
+    <div class="card" style="padding:36px 28px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="kicker">Arc II</div>
+      <div class="serif" style="font-size:34px; margin-top:8px;">Metamyth</div>
+      <div class="gold-rule" style="margin:22px 0;"></div>
+      <div class="serif gold-text" style="font-size:60px; line-height:1;">$5,000<span style="font-size:24px;">/mo</span></div>
+      <p class="body" style="font-size:19px; color:var(--paper-dim); margin-top:8px;">Monthly</p>
+      <p class="body" style="font-size:22px; margin-top:24px;">Forge the myth of your future.</p>
+    </div>
+
+    <div class="card" style="padding:36px 28px;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="kicker">Arc III</div>
+      <div class="serif" style="font-size:34px; margin-top:8px;">MythOS</div>
+      <div class="gold-rule" style="margin:22px 0;"></div>
+      <div class="serif gold-text" style="font-size:60px; line-height:1;">$10,000<span style="font-size:24px;">/mo</span></div>
+      <p class="body" style="font-size:19px; color:var(--paper-dim); margin-top:8px;">Full council</p>
+      <p class="body" style="font-size:22px; margin-top:24px;">Turn business into a game.</p>
+    </div>
+
+    <div class="card" style="padding:36px 28px; border-color:var(--teal); box-shadow:0 0 40px rgba(95,232,211,0.10);">
+      <span class="corner tl" style="border-color:var(--teal);"></span>
+      <span class="corner tr" style="border-color:var(--teal);"></span>
+      <span class="corner bl" style="border-color:var(--teal);"></span>
+      <span class="corner br" style="border-color:var(--teal);"></span>
+      <div class="kicker" style="color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">Arc IV</div>
+      <div class="serif" style="font-size:34px; margin-top:8px;">StoryLiving</div>
+      <div class="gold-rule" style="margin:22px 0; background:linear-gradient(90deg, transparent, var(--teal), transparent); opacity:0.5;"></div>
+      <div class="serif teal" style="font-size:40px; line-height:1;">By invitation</div>
+      <p class="body" style="font-size:19px; color:var(--paper-dim); margin-top:8px;">Value&#8209;flow</p>
+      <p class="body" style="font-size:22px; margin-top:24px;">Author reality.</p>
+    </div>
+  </div>
+
+  <p class="body" style="position:absolute; bottom:90px; left:80px; right:80px; font-size:22px; color:var(--paper-dim); max-width:1680px; line-height:1.55;">
+    Designed to transform your world in hours and make purpose start paying by the Metamyth. We crack you out of the old story, shoot you into the new one, and walk beside you as long as you want the company. End at any arc, keep everything you built, ride off into the sunset. Or stay and build a world with us in a growing movement to change the story the planet is running on.
+  </p>
+
+  <div class="page-mark">IX · The Investment</div>
+  <div class="page-number">14 / 16</div>
+</section>
+<!-- ═══════ 15 — CLOSE ═══════ -->
+<section data-screen-label="15 Close">
+  <div class="frame"><i></i><b></b></div>
+
+  <div style="position:absolute; top:46%; left:50%; transform:translate(-50%,-50%); width:1100px; height:1100px; border-radius:50%; background:radial-gradient(circle, rgba(95,232,211,0.10), rgba(95,232,211,0) 60%); pointer-events:none;"></div>
+
+  <img src="assets/butterfly.png" alt="" aria-hidden="true" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-56%); width:1040px; height:1040px; object-fit:contain; opacity:0.28; pointer-events:none;">
+
+  <div style="position:absolute; top:74px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:22px;">
+      <img src="assets/butterfly.png" alt="" style="width:62px; height:62px; object-fit:contain;">
+      <div class="wordmark" style="font-size:30px; letter-spacing:0.34em;">Metamyth</div>
+    </div>
+    <div class="kicker" style="font-size:16px; letter-spacing:0.36em;">Metamyth.quest</div>
+  </div>
+
+  <div style="position:absolute; top:300px; left:80px; right:80px; text-align:center;">
+    <div class="eyebrow" style="justify-content:center;"><span class="dot"></span>The Threshold</div>
+    <p class="serif" style="font-size:38px; line-height:1.3; margin:48px auto 0; max-width:1400px; color:var(--paper-dim);">
+      If you were to stop hiding from your own power,
+    </p>
+    <h2 class="serif" style="font-size:100px; line-height:0.98; margin:32px 0 0; letter-spacing:-0.01em;">
+      what <span class="teal" style="text-shadow:0 0 28px var(--teal-glow), 0 0 60px rgba(95,232,211,0.35);">story</span> would you write?
+    </h2>
+
+    <div style="margin-top:80px; display:inline-flex; align-items:center; gap:24px; padding:22px 44px; border:1px solid var(--gold); position:relative;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="serif gold-text" style="font-size:30px; letter-spacing:0.32em; text-transform:uppercase;">Begin your story</span>
+      <span class="serif teal" style="font-size:34px; text-shadow:0 0 14px var(--teal-glow);">→</span>
+    </div>
+  </div>
+
+  <div style="position:absolute; bottom:120px; left:0; right:0; text-align:center;">
+    <p class="serif" style="font-size:22px; color:var(--paper-dim); letter-spacing:0.04em;">
+      The future we dream is one story away.
+    </p>
+    <div style="margin-top:24px; display:flex; align-items:center; justify-content:center; gap:18px;">
+      <span class="kicker" style="font-size:17px; letter-spacing:0.36em;">Metamyth Story Systems</span>
+      <span style="width:24px; height:1px; background:var(--gold); opacity:0.5;"></span>
+      <span class="kicker" style="font-size:17px; letter-spacing:0.36em; color:var(--teal); text-shadow:0 0 8px var(--teal-glow);">metamyth.quest</span>
+    </div>
+  </div>
+
+  <div class="page-mark" style="font-family:'Cinzel Decorative', serif; font-size:17px; letter-spacing:0.22em; text-transform:none; color:var(--paper-dim); bottom:24px;">Another World is Possible</div>
+  <div class="page-number">15 / 16</div>
+</section>
+<!-- ═══════ 16 — THE STORY SPEAKS FOR ITSELF ═══════ -->
+<section data-screen-label="16 Story Speaks For Itself">
+  <div class="frame"><i></i><b></b></div>
+  <div style="position:absolute; top:108px; left:80px;" class="eyebrow"><span class="dot"></span>After the close</div>
+
+  <!-- Header -->
+  <div style="position:absolute; top:160px; left:80px; right:80px;">
+    <h2 class="serif" style="font-size:56px; line-height:1; margin:0;">
+      The story <span class="gold-text">speaks for itself.</span>
+    </h2>
+    <p class="body" style="margin-top:14px; font-size:19px; color:var(--paper-dim); font-style:italic; font-family:var(--serif);">
+      In their own words, unfiltered.
+    </p>
+  </div>
+
+  <!-- THREE BIG TESTIMONIALS -->
+  <div style="position:absolute; top:268px; left:80px; height:412px; right:80px; display:grid; grid-template-columns:repeat(3,1fr); gap:36px;">
+
+    <!-- Gareth -->
+    <div style="position:relative; padding:42px 38px 34px; border:1px solid rgba(201,168,90,0.45); background:rgba(8,18,16,0.5); display:flex; flex-direction:column;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="serif gold-text" style="position:absolute; top:-30px; left:22px; font-size:108px; line-height:1; font-style:italic; opacity:0.55; background:var(--ink); padding:0 10px;">&ldquo;</span>
+      <p class="serif" style="font-size:23px; line-height:1.5; color:var(--paper); font-style:italic; margin:8px 0 0; flex:1; text-wrap:pretty;">
+        I feel like I have a new nervous system &mdash; like I have entered a different reality. <span class="gold-text" style="font-style:normal;">I am synchronized at mind, body, spirit.</span> The story is real. My story is real, and the weak parts are what make it strong. I am a scientist. I am a doctor. If anyone with a rational, analytical mind is doubting this &mdash; stop and listen. <span class="gold-text" style="font-style:normal;">This is how it is done.</span>
+      </p>
+      <div class="gold-rule" style="margin:24px 0 14px; max-width:80px;"></div>
+      <div class="kicker" style="font-size:15px; letter-spacing:0.32em;">Gareth Thompson</div>
+      <p class="body" style="font-size:16px; margin-top:6px; color:var(--paper-dim); font-family:var(--serif); font-style:italic;">Doctor &middot; planetary breakthrough</p>
+    </div>
+
+    <!-- Michael -->
+    <div style="position:relative; padding:42px 38px 34px; border:1px solid rgba(201,168,90,0.45); background:rgba(8,18,16,0.5); display:flex; flex-direction:column;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="serif gold-text" style="position:absolute; top:-30px; left:22px; font-size:108px; line-height:1; font-style:italic; opacity:0.55; background:var(--ink); padding:0 10px;">&ldquo;</span>
+      <p class="serif" style="font-size:23px; line-height:1.5; color:var(--paper); font-style:italic; margin:8px 0 0; flex:1; text-wrap:pretty;">
+        Zachary got me at a moment of despair &mdash; I was basically giving up. <span class="gold-text" style="font-style:normal;">The synthesis document that came out of our interview was profound.</span> Less than four months later I had written the book, launched a paid program, and was getting feedback like <em style="color:var(--gold); font-style:normal;">this chapter brought me to tears.</em> A 20-year mission I could not see &mdash; until his process showed me.
+      </p>
+      <div class="gold-rule" style="margin:24px 0 14px; max-width:80px;"></div>
+      <div class="kicker" style="font-size:15px; letter-spacing:0.32em;">Michael Haupt</div>
+      <p class="body" style="font-size:16px; margin-top:6px; color:var(--paper-dim); font-family:var(--serif); font-style:italic;">Book, brand &amp; mission in 28 days</p>
+    </div>
+
+    <!-- Kevin -->
+    <div style="position:relative; padding:42px 38px 34px; border:1px solid rgba(201,168,90,0.45); background:rgba(8,18,16,0.5); display:flex; flex-direction:column;">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <span class="serif gold-text" style="position:absolute; top:-30px; left:22px; font-size:108px; line-height:1; font-style:italic; opacity:0.55; background:var(--ink); padding:0 10px;">&ldquo;</span>
+      <p class="serif" style="font-size:23px; line-height:1.5; color:var(--paper); font-style:italic; margin:8px 0 0; flex:1; text-wrap:pretty;">
+        Brother Zachary, I am undone. The story reads like the narrative of my Akashic Records. What words describe my feeling in this moment? <span class="gold-text" style="font-style:normal;">Fulfillment.</span> To read my highest purpose &mdash; and see how it will manifest &mdash; can only be described as fulfillment. <span class="gold-text" style="font-style:normal;">Our quest has begun.</span>
+      </p>
+      <div class="gold-rule" style="margin:24px 0 14px; max-width:80px;"></div>
+      <div class="kicker" style="font-size:15px; letter-spacing:0.32em;">Kevin Howard</div>
+      <p class="body" style="font-size:16px; margin-top:6px; color:var(--paper-dim); font-family:var(--serif); font-style:italic;">After his first session</p>
+    </div>
+  </div>
+
+  <!-- Divider ornament -->
+  <div style="position:absolute; top:704px; left:300px; right:300px; display:flex; align-items:center; gap:24px;">
+    <div style="height:1px; flex:1; background:linear-gradient(90deg, transparent, var(--gold)); opacity:0.4;"></div>
+    <div class="kicker" style="font-size:14px; color:var(--paper-dim); letter-spacing:0.42em;">&mdash; more voices &mdash;</div>
+    <div style="height:1px; flex:1; background:linear-gradient(90deg, var(--gold), transparent); opacity:0.4;"></div>
+  </div>
+
+  <!-- PULL-QUOTE WALL — back-of-book blurbs, big and legible -->
+  <div style="position:absolute; top:748px; left:80px; right:80px; bottom:58px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:22px;">
+
+    <div class="sq-tile">
+      <p>Holy guacamole &mdash; <span class="hl">you made sense of the madness.</span></p>
+    </div>
+
+    <div class="sq-tile">
+      <p>It shook me, literally. <span class="hl">It felt like a real regenesis.</span></p>
+    </div>
+
+    <div class="sq-tile">
+      <p>Almost like a miniature death &mdash; <span class="hl">then coming back alive again.</span></p>
+    </div>
+
+    <div class="sq-tile">
+      <p>I just didn&rsquo;t realize that <span class="hl">I was the missing piece.</span></p>
+    </div>
+
+    <div class="sq-tile">
+      <p>You do what psychologists won&rsquo;t: <span class="hl">you see the problems as meaningful.</span></p>
+    </div>
+
+    <div class="sq-tile">
+      <p>The moment you approached, I knew &mdash; <span class="hl-teal">this guy is the storytelling wizard.</span></p>
+    </div>
+  </div>
+
+  <div class="page-mark">The Story Speaks for Itself</div>
+  <div class="page-number">16 / 16</div>
+</section>
+
+</deck-stage>
+
+<script src="image-slot.js"></script>
+<script src="deck-stage.js"></script>
+
+</body>
+</html>

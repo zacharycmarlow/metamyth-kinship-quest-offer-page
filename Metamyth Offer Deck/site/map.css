@@ -1,0 +1,48 @@
+.mp{padding:clamp(100px,16vh,180px) 0}
+.mp-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px}
+.mp-chips button{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mist);background:transparent;border:1px solid var(--gold-faint);padding:0 16px;min-height:44px;cursor:pointer;transition:color .3s,border-color .3s,background .3s}
+.mp-chips button:hover{color:var(--cream);border-color:var(--c)}
+.mp-chips button.on{color:var(--deep);background:var(--c);border-color:var(--c)}
+.mp-grid{display:grid;grid-template-columns:320px minmax(0,1fr);gap:0;margin:0 clamp(12px,2vw,32px);border:1px solid var(--gold-faint);background:radial-gradient(ellipse at 50% 40%,var(--forest),var(--deep) 75%)}
+@media (max-width:1000px){.mp-grid{grid-template-columns:minmax(0,1fr)}.mp-panel{order:2}}
+.mp-map{position:relative;min-width:0}
+.mp-map svg{display:block;width:100%;height:auto;overflow:visible}
+.mp-node{cursor:pointer;outline:none}
+.mp-node .ring{fill:var(--deep);stroke:var(--c);stroke-width:1.5;transition:stroke-width .3s,r .4s var(--ease)}
+.mp-node .halo{fill:var(--c);opacity:0;transition:opacity .4s}
+.mp-node image{transition:transform .4s var(--ease);transform-box:fill-box;transform-origin:center}
+.mp-node text{font-family:var(--sans);font-size:22px;letter-spacing:.12em;text-transform:uppercase;fill:var(--mist);transition:fill .3s}
+.mp-node text.num{font-size:16px;fill:var(--c);letter-spacing:.1em}
+.mp-node:hover .halo,.mp-node:focus-visible .halo{opacity:.18}
+.mp-node:hover text,.mp-node:focus-visible text{fill:var(--cream)}
+.mp-node:hover image{transform:scale(1.12)}
+.mp-node.on .halo{opacity:.3}
+.mp-node.on .ring{stroke-width:2.5}
+.mp-node.on text{fill:var(--cream)}
+.mp-node.done .ring{fill:color-mix(in oklch,var(--c) 22%,var(--deep))}
+.mp-node,.mp-region,.mp-seg{transition:opacity .6s}
+.mp[data-f] .dim.dim{opacity:.16}
+.mp-region text{font-family:var(--serif);font-size:54px;fill:var(--c);opacity:.22;letter-spacing:.02em}
+.mp-region .sub{font-family:var(--sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.55}
+.mp-seg .base{fill:none;stroke:var(--c);stroke-width:1.5;stroke-dasharray:2 7;opacity:.45}
+.mp-seg .lit{fill:none;stroke:var(--c);stroke-width:2.5;stroke-linecap:round;filter:drop-shadow(0 0 6px var(--c));transition:stroke-dashoffset .9s var(--ease)}
+.mp-trav{fill:var(--cream);filter:drop-shadow(0 0 10px #fff) drop-shadow(0 0 20px var(--gold))}
+.mp-star{fill:var(--cream)}
+.mp-pop{opacity:0;transform:scale(.4);transform-box:fill-box;transform-origin:center;transition:opacity .6s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.mp.in .mp-pop{opacity:1;transform:none}
+.mp-panel{border-right:1px solid var(--gold-faint);padding:36px 32px;display:flex;flex-direction:column;gap:14px;min-height:100%;background:rgba(9,30,20,.55)}
+@media (max-width:1000px){.mp-panel{border-right:0;border-top:1px solid var(--gold-faint)}}
+.mp-panel .ic{width:104px;height:104px;object-fit:contain;filter:drop-shadow(0 0 28px color-mix(in oklch,var(--c) 55%,transparent));margin-bottom:6px}
+.mp-panel .label{color:var(--c)}
+.mp-panel h3{font-size:clamp(34px,3vw,44px)}
+.mp-panel .tag{font-family:var(--serif);font-size:21px;color:var(--c)}
+.mp-panel p{color:var(--ivory);font-size:17px;line-height:1.6}
+.mp-panel .who{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--mist)}
+.mp-panel .nav3{margin-top:auto;padding-top:22px;border-top:1px solid var(--gold-faint);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.mp-panel .nav3 button{font-family:var(--sans);font-size:11px;letter-spacing:.24em;text-transform:uppercase;background:none;border:1px solid var(--gold-faint);color:var(--cream);cursor:pointer;min-height:44px;padding:0 16px;transition:border-color .3s}
+.mp-panel .nav3 button:hover:not(:disabled){border-color:var(--c)}
+.mp-panel .nav3 button:disabled{opacity:.25;cursor:default}
+.mp-panel .nav3 span{font-size:11px;letter-spacing:.2em;color:var(--mist)}
+.mp-body{transition:opacity .35s}
+.mp-body.swap{opacity:0}
+@media (max-width:640px){.mp-node text:not(.num){display:none}.mp-region text{font-size:72px}}
