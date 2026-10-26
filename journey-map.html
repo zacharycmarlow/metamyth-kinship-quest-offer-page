@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Journey — Metamyth</title>
+  <style>
+    @font-face {
+      font-family: 'Pherome';
+      src: url('fonts/Pherome Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('fonts/Futura Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Futura';
+      src: url('fonts/Futura_Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    :root {
+      --color-bg-deep:     #091e14;
+      --color-bg-forest:   #0d3122;
+      --color-bg-mid:      #123d2a;
+      --color-gold-bright: #d4a843;
+      --color-gold-line:   rgba(212,168,67,0.45);
+      --color-teal-glow:   #2ec4b0;
+      --color-cream:       #f0e8d0;
+      --color-ivory:       #e8ddc0;
+      --color-mist:        #b0c4bb;
+      --color-smoke:       #607a6e;
+      --font-display: 'Pherome', Georgia, serif;
+      --font-label:   'Futura', 'Trebuchet MS', sans-serif;
+      --font-body:    'Futura', 'Trebuchet MS', sans-serif;
+      --font-italic:  'Pherome', Georgia, serif;
+      --text-2xs:  0.625rem;
+      --text-xs:   0.75rem;
+      --text-sm:   0.875rem;
+      --text-md:   1.125rem;
+      --text-xl:   1.75rem;
+      --text-2xl:  2.5rem;
+      --text-3xl:  3.5rem;
+      --tracking-wider:  0.15em;
+      --tracking-widest: 0.25em;
+      --tracking-tight: -0.01em;
+      --leading-tight:   1.15;
+      --leading-snug:    1.3;
+      --leading-relaxed: 1.65;
+      --duration-base: 280ms;
+      --ease-out: cubic-bezier(0.0,0.0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--color-bg-deep);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      font-family: var(--font-body);
+    }
+
+    .journey-wrap {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Ornament strip ── */
+    .top-ornament {
+      display: flex;
+      align-items: center;
+      padding: 32px 0 0;
+      margin-bottom: 48px;
+    }
+    .orn-line { flex: 1; height: 1px; background: var(--color-gold-line); }
+    .orn-corner { width: 10px; height: 10px; position: relative; }
+    .orn-corner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 7px; height: 7px;
+      border-top: 1px solid var(--color-gold-bright);
+      border-left: 1px solid var(--color-gold-bright);
+    }
+    .orn-corner.right::before {
+      left: auto; right: 0;
+      border-left: none;
+      border-right: 1px solid var(--color-gold-bright);
+    }
+    .orn-diamond {
+      color: var(--color-gold-bright);
+      font-size: 7px;
+      padding: 0 10px;
+      line-height: 1;
+    }
+
+    /* ── Step nodes ── */
+    .step-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 20px;
+      padding-top: 4px;
+    }
+    .step-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border-width: 1.5px;
+      border-style: solid;
+      background: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background var(--duration-base) var(--ease-out),
+                  box-shadow var(--duration-base) var(--ease-out);
+    }
+    .step-dot.active { background: currentColor; }
+    .step-line {
+      width: 1px;
+      min-height: 28px;
+      flex: 1;
+      margin-top: 4px;
+      transition: min-height var(--duration-base) var(--ease-out);
+    }
+    .step-line.expanded { min-height: 60px; }
+    .step-body {
+      flex: 1;
+      cursor: pointer;
+      padding-bottom: 6px;
+    }
+    .step-name {
+      font-family: var(--font-label);
+      font-size: var(--text-sm);
+      letter-spacing: 0.03em;
+      color: var(--color-cream);
+      line-height: var(--leading-snug);
+    }
+    .step-desc {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity var(--duration-base) var(--ease-out);
+    }
+    .step-desc.open { max-height: 140px; opacity: 1; }
+    .step-desc-inner {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--color-mist);
+      line-height: var(--leading-relaxed);
+      margin-top: 6px;
+    }
+
+    /* ── Deliverables panel ── */
+    .deliverables-toggle {
+      border-radius: 4px;
+      padding: 13px 16px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: filter var(--duration-base) var(--ease-out);
+    }
+    .deliverables-toggle:hover { filter: brightness(1.1); }
+    .deliverables-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .deliverables-label {
+      font-family: var(--font-label);
+      font-size: var(--text-2xs);
+      letter-spacing: var(--tracking-widest);
+      text-transform: uppercase;
+    }
+    .deliverables-plus {
+      font-size: 16px;
+      line-height: 1;
+      font-family: var(--font-label);
+      transition: transform var(--duration-base) var(--ease-out);
+    }
+    .deliverables-plus.open { transform: rotate(45deg); }
+    .deliverables-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease;
+    }
+    .deliverables-body.open { max-height: 320px; }
+    .deliverable-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 0 0;
+    }
+    .deliverable-icon {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 0.88;
+    }
+    .deliverable-text {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      color: var(--color-ivory);
+      line-height: var(--leading-snug);
+    }
+
+    /* ── Threshold ── */
+    .threshold-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-content: center;
+      padding: 14px 0 4px;
+    }
+    .threshold-line { flex: 0 0 44px; height: 1px; }
+    .threshold-text {
+      font-family: var(--font-italic);
+      font-style: italic;
+      font-size: var(--text-xs);
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    /* ── Arc divider ── */
+    .arc-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 28px 0;
+    }
+    .arc-divider-line { flex: 1; height: 1px; background: var(--color-gold-line); }
+    .arc-divider-diamond { color: var(--color-gold-bright); font-size: 7px; }
+
+    /* ── Arc icon ── */
+    .arc-icon {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 0.95;
+      filter: drop-shadow(0 2px 16px rgba(0,0,0,0.55));
+    }
+
+    /* ── Footer ── */
+    .footer-rule {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-gold-line), transparent);
+      margin: 0 auto 28px;
+    }
+
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--color-smoke); border-radius: 2px; }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const MAPN={seedling:'sprout',star:'north-star',crystal:'crystal-ball',portal:'gate',shell:'pearl',orb:'landscape',goblet:'chalice',people:'council'};
+    const I = name => `offer-deck/assets/icons/${MAPN[name]||name}.png`;
+    const PURPLE = '#c090c8';
+
+    const journeyData = [
+      {
+        arc: 'I',
+        name: 'OriginStory',
+        verb: 'WRITE',
+        headline: 'Write the book of your life.',
+        duration: '30 days',
+        color: '#d4a843',
+        arcIcon: I('seedling'),
+        steps: [
+          { name: 'Session with Cattaleya',   desc: 'Open the space. Find where the old story lives in your body.' },
+          { name: 'The Origin Initiation',    desc: 'Seven days, seven chapters. A crash course in telling stories across seven mediums that ends the old story and makes you the storyteller.' },
+          { name: 'Session with Zachary',     desc: 'The full pattern of your life reflected back. Your StorySeed crystallizes.' },
+        ],
+        deliverables: [
+          { text: 'Origin Story',                 icon: I('scroll')  },
+          { text: 'Embodied Mission Blueprint',   icon: I('compass') },
+          { text: 'VoiceSeed',                    icon: I('shell')   },
+          { text: '7 stories across 7 formats',  icon: I('map')     },
+        ],
+        threshold: 'Can you end the old story?',
+      },
+      {
+        arc: 'II',
+        name: 'Metamyth',
+        verb: 'FORGE',
+        headline: 'Forge the myth of your future.',
+        duration: '2 months',
+        color: '#2ec4b0',
+        arcIcon: I('star'),
+        steps: [
+          { name: 'First Metamyth Session',   desc: 'Zachary guides you through the ancient pattern of transformation. Your life written all the way into the future.' },
+          { name: 'Sword Protocol',           desc: 'Craft the scalable repeatable set of steps that turns your transformation into a solution. And gets you paid to do it.' },
+          { name: 'Second Metamyth Session',  desc: 'Vision, mission, the full arc from where you came from to where you are going, held in one story.' },
+          { name: 'Cattaleya Integration',    desc: 'Ground the new story in the body so the body carries it forward.' },
+          { name: 'Simon Accountability',     desc: 'Map the gap. Financial clarity, structural clarity.' },
+          { name: 'Story System Installed',   desc: 'AI trained on your entire journey, your voice, your values. Co-creating with you from here.' },
+          { name: 'Beginning Ceremony',       desc: 'Celebration. Mission Map delivered. The first mountain climbed.' },
+        ],
+        deliverables: [
+          { text: 'Metamyth Source Manuscript', icon: I('scroll')  },
+          { text: 'Sword Protocol',             icon: I('sword')   },
+          { text: 'Story System',               icon: I('crystal') },
+          { text: 'Mission Map',                icon: I('map')     },
+          { text: 'Lifetime access',            icon: I('portal')  },
+        ],
+        threshold: 'Can your transformation serve others?',
+      },
+      {
+        arc: 'III',
+        name: 'MythOS',
+        verb: 'PLAY',
+        headline: 'Turn business into the ultimate game.',
+        duration: 'Ongoing',
+        color: '#8bc472',
+        arcIcon: I('sword'),
+        steps: [
+          { name: 'Full Council Assembles',      desc: 'The whole team convenes around your mission. Roles assigned, rhythm established.' },
+          { name: 'Content System Goes Live',    desc: 'Systematic storytelling running on your voice across every platform.' },
+          { name: 'Offer Spreading',             desc: 'The transformation is the marketing. The story carries itself.' },
+          { name: 'Capital Architecture',        desc: 'The financial narrative that makes you undeniable to the investors who get it.' },
+          { name: 'Team Alignment',              desc: 'Everyone pulling in one direction. Leaders who create leaders.' },
+        ],
+        deliverables: [
+          { text: 'Living content system',           icon: I('globe')   },
+          { text: 'Self-spreading offer',            icon: I('flag')    },
+          { text: 'Capital narrative',               icon: I('compass') },
+          { text: 'Team running the same story',     icon: I('people')  },
+        ],
+        threshold: 'Can the game spread itself?',
+      },
+      {
+        arc: 'IV',
+        name: 'StoryLiving',
+        verb: 'AUTHOR',
+        headline: 'Author reality.',
+        duration: 'By invitation',
+        color: PURPLE,
+        arcIcon: I('butterfly'),
+        steps: [
+          { name: 'Cinematic Storytelling',   desc: 'Your story on screen. Documentary, narrative, episodic.' },
+          { name: 'Adventure & Ceremony',     desc: 'Retreats and residency in the heart of the world.' },
+          { name: 'Partnership on Outcomes',  desc: 'Launches, raises, campaigns. We share in the treasure.' },
+          { name: 'The Federation',           desc: 'A planetary network of missions rewriting the source code of the world.' },
+        ],
+        deliverables: [
+          { text: 'Cinema',                   icon: I('orb')      },
+          { text: 'Ceremony',                 icon: I('goblet')   },
+          { text: 'Federation',               icon: I('globe')    },
+          { text: 'Value-flow partnership',   icon: I('fountain') },
+        ],
+        threshold: 'Can your story shape the world?',
+      },
+    ];
+
+    function StepNode({ step, color, isLast }) {
+      const [open, setOpen] = useState(false);
+      return (
+        <div className="step-item">
+          <div className="step-spine">
+            <div
+              className={`step-dot${open ? ' active' : ''}`}
+              style={{ borderColor: color, color: color, boxShadow: open ? `0 0 8px ${color}55` : 'none' }}
+              onClick={() => setOpen(v => !v)}
+            ></div>
+            {!isLast && (
+              <div
+                className={`step-line${open ? ' expanded' : ''}`}
+                style={{ background: `linear-gradient(to bottom, ${color}55, ${color}10)` }}
+              ></div>
+            )}
+          </div>
+          <div className="step-body" onClick={() => setOpen(v => !v)}>
+            <div className="step-name">{step.name}</div>
+            <div className={`step-desc${open ? ' open' : ''}`}>
+              <div className="step-desc-inner">{step.desc}</div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function ArcCard({ data }) {
+      const [showDelivs, setShowDelivs] = useState(false);
+      return (
+        <div style={{ position: 'relative' }}>
+
+          {/* Color accent bar */}
+          <div style={{
+            width: '32px', height: '2px',
+            background: data.color,
+            marginBottom: '20px',
+            boxShadow: `0 0 10px ${data.color}70`,
+          }}></div>
+
+          {/* Header row */}
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '16px', marginBottom: '24px' }}>
+            <div style={{ flex: 1 }}>
+              {/* Arc label */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                <span style={{
+                  fontFamily: 'var(--font-label)',
+                  fontSize: 'var(--text-2xs)',
+                  letterSpacing: 'var(--tracking-widest)',
+                  color: data.color,
+                  textTransform: 'uppercase',
+                }}>ARC {data.arc}</span>
+                <div style={{ flex: 1, height: '1px', background: `linear-gradient(to right, ${data.color}45, transparent)` }}></div>
+              </div>
+
+              {/* Arc name */}
+              <div style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-2xl)',
+                lineHeight: 'var(--leading-tight)',
+                letterSpacing: 'var(--tracking-tight)',
+                color: 'var(--color-cream)',
+                marginBottom: '6px',
+              }}>
+                {data.name}
+              </div>
+
+              {/* Verb · Duration */}
+              <div style={{
+                fontFamily: 'var(--font-label)',
+                fontSize: 'var(--text-2xs)',
+                letterSpacing: 'var(--tracking-wider)',
+                color: data.color,
+                textTransform: 'uppercase',
+                marginBottom: '12px',
+              }}>
+                {data.verb} · {data.duration}
+              </div>
+
+              {/* Headline */}
+              <div style={{
+                fontFamily: 'var(--font-italic)',
+                fontStyle: 'italic',
+                fontSize: 'var(--text-md)',
+                color: 'var(--color-ivory)',
+                lineHeight: 'var(--leading-snug)',
+              }}>
+                {data.headline}
+              </div>
+            </div>
+
+            {/* Arc icon */}
+            <img
+              src={data.arcIcon}
+              className="arc-icon"
+              alt=""
+              style={{ marginTop: '28px' }}
+            />
+          </div>
+
+          {/* Steps */}
+          <div style={{ paddingLeft: '2px', marginBottom: '22px' }}>
+            {data.steps.map((step, i) => (
+              <StepNode
+                key={i}
+                step={step}
+                color={data.color}
+                isLast={i === data.steps.length - 1}
+              />
+            ))}
+          </div>
+
+          {/* Deliverables */}
+          <div
+            className="deliverables-toggle"
+            style={{ border: `1px solid ${data.color}28`, background: `${data.color}09` }}
+            onClick={() => setShowDelivs(v => !v)}
+          >
+            <div className="deliverables-header">
+              <span className="deliverables-label" style={{ color: data.color }}>
+                What you carry out
+              </span>
+              <span className={`deliverables-plus${showDelivs ? ' open' : ''}`} style={{ color: data.color }}>+</span>
+            </div>
+            <div className={`deliverables-body${showDelivs ? ' open' : ''}`}>
+              <div style={{ paddingTop: '8px' }}>
+                {data.deliverables.map((d, i) => (
+                  <div key={i} className="deliverable-row">
+                    <img src={d.icon} className="deliverable-icon" alt="" />
+                    <span className="deliverable-text">{d.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Threshold */}
+          <div className="threshold-row">
+            <div className="threshold-line" style={{ background: `${data.color}28` }}></div>
+            <div className="threshold-text" style={{ color: `${data.color}88` }}>{data.threshold}</div>
+            <div className="threshold-line" style={{ background: `${data.color}28` }}></div>
+          </div>
+
+        </div>
+      );
+    }
+
+    function ArcDivider() {
+      return (
+        <div className="arc-divider">
+          <div className="arc-divider-line"></div>
+          <span className="arc-divider-diamond">◆</span>
+          <div className="arc-divider-line"></div>
+        </div>
+      );
+    }
+
+    function JourneyMap() {
+      return (
+        <div style={{ background: 'var(--color-bg-deep)', minHeight: '100vh' }}>
+          <div className="journey-wrap">
+
+            {/* Top ornament */}
+            <div className="top-ornament">
+              <div className="orn-corner"></div>
+              <div className="orn-line"></div>
+              <span className="orn-diamond">◆</span>
+              <div className="orn-line"></div>
+              <div className="orn-corner right"></div>
+            </div>
+
+            {/* Header */}
+            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+              <div style={{ marginBottom: '18px' }}>
+                <img
+                  src="assets/logo-butterfly.png"
+                  alt="Metamyth"
+                  style={{ width: '56px', height: '56px', objectFit: 'contain', filter: 'drop-shadow(0 0 14px rgba(46,196,176,0.45))' }}
+                />
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-label)',
+                fontSize: 'var(--text-2xs)',
+                letterSpacing: 'var(--tracking-widest)',
+                color: 'var(--color-teal-glow)',
+                opacity: 0.55,
+                textTransform: 'uppercase',
+                marginBottom: '14px',
+              }}>
+                Metamyth Story Systems
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'var(--text-3xl)',
+                lineHeight: 'var(--leading-tight)',
+                letterSpacing: 'var(--tracking-tight)',
+                color: 'var(--color-cream)',
+                margin: '0 0 10px',
+              }}>
+                The Journey
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-italic)',
+                fontStyle: 'italic',
+                fontSize: 'var(--text-md)',
+                color: 'var(--color-gold-bright)',
+                lineHeight: 1.4,
+              }}>
+                Each level earns the next.
+              </div>
+            </div>
+
+            {/* Intro */}
+            <div style={{
+              textAlign: 'center',
+              fontFamily: 'var(--font-body)',
+              fontSize: 'var(--text-sm)',
+              color: 'var(--color-mist)',
+              lineHeight: 'var(--leading-relaxed)',
+              maxWidth: '380px',
+              margin: '0 auto 48px',
+            }}>
+              A structured journey with kinship coaches guiding you through every threshold.
+              Tap any step to see what happens there.
+            </div>
+
+            {/* Arcs */}
+            {journeyData.map((arc, i) => (
+              <div key={arc.arc}>
+                <ArcCard data={arc} />
+                {i < journeyData.length - 1 && <ArcDivider />}
+              </div>
+            ))}
+
+            {/* Footer */}
+            <div style={{ textAlign: 'center', paddingTop: '52px' }}>
+              <div className="footer-rule"></div>
+              <div style={{
+                fontFamily: 'var(--font-italic)',
+                fontStyle: 'italic',
+                fontSize: 'var(--text-xl)',
+                color: 'var(--color-gold-bright)',
+                lineHeight: 1.4,
+                marginBottom: '14px',
+                textShadow: '0 0 18px rgba(212,168,67,0.45)',
+              }}>
+                The future you dream is one story away.
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-label)',
+                fontSize: 'var(--text-2xs)',
+                letterSpacing: 'var(--tracking-widest)',
+                color: 'var(--color-smoke)',
+                textTransform: 'uppercase',
+              }}>
+                metamyth.quest
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', marginTop: '40px' }}>
+                <div style={{ flex: 1, height: '1px', background: 'var(--color-gold-line)' }}></div>
+                <span style={{ color: 'var(--color-gold-bright)', fontSize: '7px', padding: '0 10px' }}>◆</span>
+                <div style={{ flex: 1, height: '1px', background: 'var(--color-gold-line)' }}></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<JourneyMap />);
+  </script>
+</body>
+</html>
