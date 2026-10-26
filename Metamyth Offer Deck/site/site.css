@@ -76,23 +76,6 @@ p{margin:0;text-wrap:pretty}
 .chapter-head h2{font-size:clamp(44px,6vw,96px)}
 .big-quote{font-family:var(--serif);font-size:clamp(32px,4.4vw,68px);line-height:1.12;text-align:center;max-width:18em;margin:0 auto}
 
-.metamyth-section{gap:24px}
-.metamyth-section .metamyth-heading{font-size:clamp(44px,8.4vw,128px);line-height:.98;max-width:1100px}
-.metamyth-break{display:block}
-.metamyth-subhead{font-size:clamp(24px,3.36vw,52px);line-height:1.12;max-width:950px;margin-top:clamp(24px,3vw,40px)}
-.metamyth-lead{font-family:var(--serif);font-size:clamp(24px,2.5vw,36px);line-height:1.2;max-width:760px}
-.metamyth-copy{display:flex;flex-direction:column;gap:28px;max-width:760px;margin-top:8px}
-.metamyth-copy .lede{max-width:none}
-.metamyth-arcs-intro{margin-top:8px}
-.metamyth-arcs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));list-style:none;padding:18px 0;margin:0;border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line)}
-.metamyth-arcs li{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-width:0;padding:8px 4px;text-align:center;font-family:var(--serif);font-size:clamp(16px,1.45vw,21px);line-height:1.15;color:var(--gold)}
-.metamyth-roman{font-family:var(--sans);font-size:10px;letter-spacing:.2em;color:var(--mist)}
-.metamyth-witness{font-style:italic;color:var(--teal)}
-.metamyth-outcome{font-size:clamp(22px,1.8vw,28px);line-height:1.35;color:var(--gold)}
-.metamyth-closing{font-family:var(--serif);font-size:clamp(25px,2.5vw,36px);line-height:1.25}
-@media (max-width:900px){.metamyth-arcs{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:8px}}
-@media (max-width:600px){.metamyth-break{display:none}.metamyth-arcs{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
 .cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(32px,4vw,64px)}
 .cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,96px)}
 .cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,48px)}
