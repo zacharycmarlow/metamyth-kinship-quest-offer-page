@@ -1,0 +1,1 @@
+- [Static preview CSS caching](static-preview-css-cache.md) — if the preview keeps old styling, use a new stylesheet URL and restart the static workflow.
